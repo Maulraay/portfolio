@@ -1,0 +1,16 @@
+.homepage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    overflow: auto;
+}
+
+.homepage .title {
+    height: calc(20% - 20px);
+    color: var(--color-text);
+    align-items: center;
+    align-content: center;
+}

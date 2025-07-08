@@ -1,0 +1,51 @@
+{
+  "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^6.1.6",
+    "@mui/material": "^6.1.6",
+    "@mui/styles": "^6.5.0",
+    "@stripe/react-stripe-js": "^2.8.1",
+    "@stripe/stripe-js": "^4.9.0",
+    "axios": "^1.7.7",
+    "css-loader": "^7.1.2",
+    "file-loader": "^6.2.0",
+    "leaflet": "^1.9.4",
+    "node": "^22.11.0",
+    "nvm": "^0.0.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-leaflet": "^4.2.1",
+    "react-router-dom": "^6.28.0",
+    "style-loader": "^4.0.0"
+  },
+  "name": "webapptemplate",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "devDependencies": {
+    "@babel/cli": "^7.25.9",
+    "@babel/core": "^7.26.0",
+    "@babel/eslint-parser": "^7.25.9",
+    "@babel/plugin-transform-runtime": "^7.25.9",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.25.9",
+    "@babel/runtime": "^7.26.0",
+    "babel-loader": "^9.2.1",
+    "eslint": "^8.57.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jest": "^28.9.0",
+    "path": "^0.12.7",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server .",
+    "build": "Webpack .",
+    "test": "test"
+  },
+  "author": "maulray",
+  "license": "ISC",
+  "description": ""
+}

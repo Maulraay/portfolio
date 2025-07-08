@@ -1,0 +1,163 @@
+@import '../../colorPalette/variables.css';
+@import '../../colorPalette/light.css';
+@import '../../colorPalette/dark.css';
+
+
+/* Small devices such as large phones (640px and up) */
+/* Medium devices such as tablets (768px and up) */
+/* Large devices such as laptops (1024px and up) */
+/* Largest devices such as desktops (1280px and up) */
+
+@media only screen and (max-width: 920px) {
+    .layout .header .buttons {
+        display: none;
+    }
+
+    .layout .header .darkModeToggle {
+        display: none;
+    }
+
+    .layout .header .menuIcon {
+        height: 100%;
+        margin-right: 15px;
+        align-content: center;
+    }
+
+    .layout .header .menuIcon .MuiSvgIcon-root{
+        color: #3d383e;
+        font-size: xx-large;
+    }
+
+    .layout .menu {
+        position: fixed;
+        z-index: 1;
+        right: 0;
+        width: 30%;
+        height: 90%;
+        background-color: var(--color-bg);
+        border-left: lightgray 3px solid;
+    }
+}
+@media only screen and (min-width: 920px) {
+    .layout .header .buttons {
+        width: 50%;
+        height: 60%;
+        display: flex;
+        margin-right: 15px;
+        justify-content: space-between;
+    }
+
+    .layout .header .menuIcon {
+        display: none;
+    }
+
+    .layout .header .darkModeToggle {
+        width: 10%;
+        margin-right: 15px;
+    }
+
+    .layout .header .darkModeToggle .darkModeIcon{
+        float: right;
+        color: var(--color-text-primary)
+    }
+
+    .layout .menu {
+        display: none;
+    }
+}
+
+.layout {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.layout .body {
+    width: 100%;
+    height: 86%;
+    display: flex;
+    background-color: var(--color-bg);
+}
+
+.layout .bodyWithMenu {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    background-color: var(--color-bg);
+    opacity: 50%;
+}
+
+.layout .header {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+    outline: linen solid 3px;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.layout .header .logo {
+    width: 10%;
+    margin-left: 15px;
+    color: var(--color-text-primary)
+}
+
+.layout .footer {
+    display: flex;
+    width: 100%;
+    height: 4%;
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+    outline: linen solid 3px;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.layout .footer .copyright {
+    margin: 0 2%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.layout .footer .copyright .copyrightLogo {
+    color: var(--color-text-primary);
+    margin-right: 5px;
+}
+
+.layout .footer .link {
+    color: var(--color-link-primary);
+}
+
+.layout .footer .support {
+    padding-right: 2%;
+    display: flex;
+    gap: 10px;
+}
+
+.layout .menu .buttons{
+    height: 35%;
+    width: 90%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.layout .menu .buttons .MuiButtonBase-root{
+    text-align: center;
+}
+
+/* Global styles */
+.link {
+    color: var(--color-link);
+}
+
+.MuiTypography-h2 {
+    display: flex;
+    flex-wrap: wrap;
+}

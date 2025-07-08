@@ -1,0 +1,95 @@
+/* Small devices such as large phones (640px and up) */
+@media only screen and (max-width: 1024px) {
+    .contact .mailPanel {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        gap: 5%;
+    }
+
+    .contact .contactForm {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/* Large devices such as laptops (1024px and up) */
+@media only screen and (min-width: 1024px) {
+    .contact .mailPanel {
+        width: 80%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        gap: 5%;
+        overflow: hidden;
+    }
+
+    .contact .contactForm {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.contact {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    overflow: auto;
+}
+
+.contact .title {
+    min-height: 15%;
+    align-items: center;
+    align-content: center;
+    color: var(--color-text);
+}
+
+.contact .typography {
+    color: var(--color-text);
+    text-align: center;
+}
+
+.contact .thankYou {
+    color: var(--color-text);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 5% 0;
+    justify-content: center;
+}
+
+.contact .contactForm .sendButton {
+    background-color: var(--color-secondary);
+    color: var(--color-text-secondary);
+    width: 100%;
+}
+
+.contact .contactForm .sendButton:hover {
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+}
+
+.contact .icon {
+    margin-right: 10px;
+}
+
+
