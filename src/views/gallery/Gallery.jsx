@@ -12,6 +12,9 @@ export const Gallery = () => {
           This page will exist soon, stay tuned!
         </Typography>
         <img className={"logo"} src={construction} height={"70%"} alt={"Page under construction image"}/>
+        <Typography variant={"body1"} fontSize={25} className={"title"}>
+          Until then, you can find the source code of this website on <a href={"https://github.com/Maulraay/portfolio/tree/master"} target={"_blank"} className={'link'}>my Github</a>!
+        </Typography>
       </div>
     </Layout>
   )

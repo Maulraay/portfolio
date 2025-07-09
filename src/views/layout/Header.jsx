@@ -54,6 +54,7 @@ export const Header = (props) => {
       </a>
 
       <div className={"buttons"}>
+        <StyledButton color={"#3d383e"} variant={'outlined'} href={'/'}> Home </StyledButton>
         <StyledButton color={"#3d383e"} variant={'outlined'} href={'/about'}> About me </StyledButton>
         <StyledButton color={"#3d383e"} variant={'outlined'} href={'/gallery'}> My projects </StyledButton>
         <StyledButton color={"#3d383e"} variant={'outlined'} href={'/contact'}> Contact </StyledButton>

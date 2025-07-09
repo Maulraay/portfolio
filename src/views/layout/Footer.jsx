@@ -1,7 +1,9 @@
 import React from "react";
 import './styles.css';
-import { Typography } from "@mui/material";
+import {IconButton, Typography} from "@mui/material";
 import { Copyright, LocalPhone } from "@mui/icons-material";
+import linkedin from "../../assets/linkedin.png";
+import github from "../../assets/github.png";
 
 export const Footer = () => {
 
@@ -9,9 +11,17 @@ export const Footer = () => {
     <div className={'footer'}>
       <div className={'copyright'}>
         <Copyright className={'copyrightLogo'}/>
-        <Typography variant={"button"}>
+        <Typography variant={"button"} className={"copyrightText"}>
           2025 - Maulray
         </Typography>
+        <div className={"socialNetworks"}>
+          <IconButton href={"https://www.linkedin.com/in/malaurykeslick/"} target={"_blank"}>
+            <img src={linkedin} height={"20px"} alt={"LinkedIn redirection"}/>
+          </IconButton>
+          <IconButton href={"https://github.com/Maulraay"} target={"_blank"}>
+            <img src={github} height={"20px"} alt={"GitHub redirection"}/>
+          </IconButton>
+        </div>
       </div>
       <Typography className={'support'}>
         <LocalPhone/>

@@ -41,7 +41,7 @@
 @media only screen and (min-width: 920px) {
     .layout .header .buttons {
         width: 50%;
-        height: 60%;
+        height: 45%;
         display: flex;
         margin-right: 15px;
         justify-content: space-between;
@@ -93,7 +93,6 @@
     height: 10%;
     background-color: var(--color-primary);
     color: var(--color-text-primary);
-    outline: linen solid 3px;
     align-items: center;
     align-content: center;
     justify-content: space-between;
@@ -111,7 +110,6 @@
     height: 4%;
     background-color: var(--color-primary);
     color: var(--color-text-primary);
-    outline: linen solid 3px;
     align-content: center;
     align-items: center;
     justify-content: space-between;
@@ -127,6 +125,18 @@
 .layout .footer .copyright .copyrightLogo {
     color: var(--color-text-primary);
     margin-right: 5px;
+}
+
+.layout .footer .copyright .copyrightText {
+    color: var(--color-text-primary);
+    margin-top: 3px;
+}
+
+.layout .footer .copyright .socialNetworks{
+    padding-left: 15px;
+    display: flex;
+    align-content: center;
+    align-items: center;
 }
 
 .layout .footer .link {
