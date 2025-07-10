@@ -15,10 +15,10 @@ export const Footer = () => {
           2025 - Maulray
         </Typography>
         <div className={"socialNetworks"}>
-          <IconButton href={"https://www.linkedin.com/in/malaurykeslick/"} target={"_blank"}>
+          <IconButton href={"https://www.linkedin.com/in/malaurykeslick/"} target={"_blank"} rel={"noopener noreferrer"}>
             <img src={linkedin} height={"20px"} alt={"LinkedIn redirection"}/>
           </IconButton>
-          <IconButton href={"https://github.com/Maulraay"} target={"_blank"}>
+          <IconButton href={"https://github.com/Maulraay"} target={"_blank"} rel={"noopener noreferrer"}>
             <img src={github} height={"20px"} alt={"GitHub redirection"}/>
           </IconButton>
         </div>

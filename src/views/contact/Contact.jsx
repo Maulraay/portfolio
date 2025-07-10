@@ -5,6 +5,8 @@ import { Layout } from "../layout/Layout";
 import {Typography, TextField, Box, Button, useTheme} from "@mui/material";
 import {makeStyles} from "@mui/styles";
 import {useMyTheme} from "../App";
+import leftOrnament from "../../assets/left_ornament_contact.png";
+import rightOrnament from "../../assets/right_ornament_contact.png";
 
 
 export const Contact = () => {
@@ -70,6 +72,7 @@ export const Contact = () => {
   return (
     <Layout>
       <div className={"contact"}>
+        <img src={leftOrnament} className={"leftOrnament"}/>
         <Typography variant={"h2"} className={"title"}>Let's get in touch!</Typography>
         <div className={"mailPanel"}>
           {submitted ? (
@@ -142,11 +145,12 @@ export const Contact = () => {
                 Send Message
               </Button>
               <Typography variant={"body1"}  className={"typography"}>
-                Alternatively, directly send your email at <a href={"mailto:mkeslick.pro@gmail.com"} target={"_blank"}  className={"link"}>mkeslick.pro@gmail.com</a> or contact me on <a href={"https://www.linkedin.com/in/malaurykeslick/"} target={"_blank"}  className={"link"}>LinkedIn</a>!.
+                Alternatively, directly send your email at <a href={"mailto:mkeslick.pro@gmail.com"} target={"_blank"} rel={"noopener noreferrer"} className={"link"}>mkeslick.pro@gmail.com</a> or contact me on <a href={"https://www.linkedin.com/in/malaurykeslick/"} target={"_blank"}  className={"link"}>LinkedIn</a>!.
               </Typography>
             </Box>
           )}
         </div>
+        <img src={rightOrnament} className={"rightOrnament"}/>
       </div>
     </Layout>
   )

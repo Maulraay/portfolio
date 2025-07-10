@@ -54,6 +54,18 @@
     overflow: auto;
 }
 
+.contact .leftOrnament{
+    position: absolute;
+    top: 10%;
+    left: 0;
+}
+
+.contact .rightOrnament{
+    position: absolute;
+    bottom: 4%;
+    right: 0;
+}
+
 .contact .title {
     min-height: 15%;
     align-items: center;
