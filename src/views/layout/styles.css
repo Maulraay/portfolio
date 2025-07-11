@@ -53,12 +53,42 @@
 
     .layout .header .darkModeToggle {
         width: 10%;
-        margin-right: 15px;
+        height: 45%;
+        padding: 0 30px;
+        display: flex;
+        gap: 40%;
+    }
+
+    .layout .header .languageSelector{
+        width: 40%;
+        background-color: var(--color-text-primary);
+    }
+
+    .layout .header .languageSelector .icon{
+        color: var(--color-text-secondary);
+    }
+
+    .layout .header .languageSelector:hover .icon{
+        color: var(--color-text-secondary);
+        border-radius: 100%;
+        background-color: var(--color-secondary);
+    }
+
+    .layout .header .languageSelector .lang{
+        color: var(--color-text-secondary);
+        margin-left: 10px;
+    }
+
+    .layout .header .dropdownMenu .divider{
+        width: 100%;
+        height: 10px;
+        background-color: var(--color-primary);
     }
 
     .layout .header .darkModeToggle .darkModeIcon{
         float: right;
-        color: var(--color-text-primary)
+        color: var(--color-text-primary);
+        width: 20%;
     }
 
     .layout .menu {
@@ -102,6 +132,16 @@
     width: 10%;
     margin-left: 15px;
     color: var(--color-text-primary)
+}
+
+.layout .header .MuiButtonBase-root{
+    border-color: var(--color-text-primary);
+    color: var(--color-text-primary);
+}
+
+.layout .header .buttons .MuiButtonBase-root:hover{
+    background-color: var(--color-text-primary);
+    color: var(--color-primary);
 }
 
 .layout .footer {

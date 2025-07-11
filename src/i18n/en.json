@@ -1,0 +1,53 @@
+{
+  "layout.header.logo_alt": "Malaury Keslick stylized logo",
+  "layout.header.home": "Home",
+  "layout.header.about": "About me",
+  "layout.header.projects": "My projects",
+  "layout.header.contact": "Contact",
+  "layout.header.darkMode_alt": "Dark Mode toggle",
+
+  "layout.footer.copyright_alt": "Copyright logo",
+  "layout.footer.phone_alt": "Phone logo",
+  "layout.footer.learnMore": "Want to know more about me ?",
+  "layout.footer.contact": "Let's plan a call!",
+
+  "homepage.hi": "Hi!",
+  "homepage.iAm": "I am Malaury Keslick",
+  "homepage.jobTitle": "A Node.js Web and Software Engineer",
+  "homepage.learnMore": "Want to learn more ?",
+  "homepage.contact": "Contact me!",
+  "homepage.picture": "Main portrait",
+
+  "about.title": "A little bit more about me",
+  "about.personalPresentation_1": "Hey there! I am Malaury - a 26-year-old full-stack web developer from France, now happily living in Buchs, in the canton of St. Gallen, Switzerland. I moved here to join my partner and to finally enjoy a life surrounded by the things I love: fresh air, mountains, lakes, and a slower pace that lets me breathe and create freely.",
+  "about.personalPresentation_2": "When I’m not deep into code, you’ll probably find me singing, learning to play the piano, drawing, cooking or enjoying a cozy video game session. I’ve always been driven by curiosity and a deep need to understand how things work - which is probably why I fell for computer science in the first place. I love building things that are useful, clear, and that help people save time, not waste it.",
+  "about.personalPresentation_portrait_alt": "Myself in front of the Werdenbergsee and castle, located in Buchs SG, Switzerland",
+  "about.backgroundPresentation_portrait_alt": "Myself with my graduation gown and diploma at my graduation ceremony",
+  "about.backgroundPresentation_1": "I have always liked figuring things out - whether it was puzzles, math problems, or tricky bugs in my code. That curiosity naturally led me to study software engineering at Telecom Nancy - a french engineering school from the Mines-Telecom institute. It is a generalist program that gave me strong fundamentals in everything from algorithms and system architecture to artificial intelligence and databases, and the flexibility to explore all areas of development and switch from one language to another.",
+  "about.backgroundPresentation_2": "Since 2021, I have been working as a full-stack developer (mostly with the MERN stack - MongoDB, Express.js, React.js, Node.js), building AI-based chatbots, large-scale web platforms, and user-friendly interfaces. What I’m looking for now is a team and a project I can really get behind - something useful, meaningful, ideally with an environmental or social dimension. And of course, somewhere I can keep learning and growing while settling into this new Swiss life I’m building.",
+  "about.resumeIntroduction_1": "If you'd like to know more about my background or specific skills, feel free to take a look at my CV below. And if you have any questions or just want to chat, don't hesitate to ",
+  "about.resumeIntroduction_link": "get in touch",
+  "about.resumeIntroduction_2": " - I am always happy to connect!",
+  "about.openResume": "Open in PDF-viewer",
+  "about.downloadResume": "Download",
+  "about.resume_alt": "Resume",
+
+  "projects.willExistSoon": "This page will exist soon, stay tuned!",
+  "projects.underConstruction": "Drawing: page under construction",
+  "projects.gitHubRedirection": "Until then, you can find the source code of this website on my ",
+
+  "contact.title": "Let's get in touch!",
+  "contact.subTitle": "Send me an email!",
+  "contact.nameField": "Name",
+  "contact.emailField": "Email",
+  "contact.subjectField": "Subject",
+  "contact.messageField": "Message",
+  "contact.sendButton": "Send",
+  "contact.alternativeContact_1": "Alternatively, directly send your email at ",
+  "contact.alternativeContact_2": " or contact me on ",
+  "contact.thankYou": "Thank you for your message!",
+  "contact.thankYou_2": "I will get back to you soon.",
+  "contact.back": "Back",
+
+  "error": ""
+}

@@ -84,9 +84,23 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: center;
     margin: 5% 0;
     justify-content: center;
+}
+
+.contact .backButton {
+    background-color: var(--color-secondary);
+    color: var(--color-text-secondary);
+    min-width: fit-content;
+    width: 10%;
+    margin-top: 25px;
+}
+
+.contact .backButton:hover {
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
 }
 
 .contact .contactForm .sendButton {

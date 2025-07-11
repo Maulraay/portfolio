@@ -1,18 +1,19 @@
 import React from "react";
 import './styles.css';
-import {IconButton, Typography} from "@mui/material";
+import { IconButton, Typography } from "@mui/material";
 import { Copyright, LocalPhone } from "@mui/icons-material";
 import linkedin from "../../assets/linkedin.png";
 import github from "../../assets/github.png";
+import { FormattedMessage } from "react-intl";
 
 export const Footer = () => {
 
   return(
     <div className={'footer'}>
       <div className={'copyright'}>
-        <Copyright className={'copyrightLogo'}/>
+        <Copyright className={'copyrightLogo'} alt={<FormattedMessage id={"layout.footer.copyright_alt"} defaultMessage={"Copyright logo"}/>}/>
         <Typography variant={"button"} className={"copyrightText"}>
-          2025 - Maulray
+          {new Date().getFullYear()} - Maulray
         </Typography>
         <div className={"socialNetworks"}>
           <IconButton href={"https://www.linkedin.com/in/malaurykeslick/"} target={"_blank"} rel={"noopener noreferrer"}>
@@ -24,9 +25,9 @@ export const Footer = () => {
         </div>
       </div>
       <Typography className={'support'}>
-        <LocalPhone/>
-        Want to know more about me ?
-        <a href={"/contact"} className={'link'}>Let's plan a call!</a>
+        <LocalPhone alt={<FormattedMessage id={"layout.footer.phone_alt"} defaultMessage={"Phone logo"}/>}/>
+        <FormattedMessage id={"layout.footer.learnMore"} defaultMessage={"Want to know more about me ?"}/>
+        <a href={"/contact"} className={'link'}><FormattedMessage id={"layout.footer.contact"} defaultMessage={"Let's plan a call!"}/></a>
       </Typography>
     </div>
   )

@@ -1,0 +1,53 @@
+{
+  "layout.header.logo_alt": "Malaury Keslick stilisiertes Logo",
+  "layout.header.home": "Startseite",
+  "layout.header.about": "Über mich",
+  "layout.header.projects": "Meine Projekte",
+  "layout.header.contact": "Kontakt",
+  "layout.header.darkMode_alt": "Umschalten des Dunkelmodus",
+
+  "layout.footer.copyright_alt": "Copyright-Logo",
+  "layout.footer.phone_alt": "Telefonlogo",
+  "layout.footer.learnMore": "Möchten Sie mehr über mich erfahren?",
+  "layout.footer.contact": "Lassen Sie uns einen Termin vereinbaren!",
+
+  "homepage.hi": "Hallo!",
+  "homepage.iAm": "Ich bin Malaury Keslick",
+  "homepage.jobTitle": "Node.js Web- und Softwareentwickler",
+  "homepage.learnMore": "Möchten Sie mehr erfahren?",
+  "homepage.contact": "Kontaktieren Sie mich!",
+  "homepage.picture": "Hauptporträt",
+
+  "about.title": "Ein bisschen mehr über mich",
+  "about.personalPresentation_1": "Hallo! Ich bin Malaury – ein 26-jähriger Full-Stack-Webentwickler aus Frankreich, der jetzt glücklich in Buchs im Kanton St. Gallen, Schweiz lebt. Ich bin hierher gezogen, um bei meinem Partner zu sein und endlich ein Leben inmitten von frischer Luft, Bergen, Seen und einem langsameren Lebensrhythmus zu genießen, der mir Raum zum Atmen und kreativen Arbeiten lässt.",
+  "about.personalPresentation_2": "Wenn ich nicht gerade tief im Code stecke, findet man mich wahrscheinlich beim Singen, Klavierspielen lernen, Zeichnen oder bei einer gemütlichen Videospiel-Session. Ich war schon immer von Neugier getrieben und wollte verstehen, wie Dinge funktionieren – wahrscheinlich der Grund, warum ich mich in die Informatik verliebt habe. Ich liebe es, nützliche, klare Dinge zu bauen, die Menschen Zeit sparen – nicht verschwenden.",
+  "about.personalPresentation_portrait_alt": "Ich selbst vor dem Werdenbergsee und dem Schloss, gelegen in Buchs SG, Schweiz",
+  "about.backgroundPresentation_portrait_alt": "Ich selbst mit meiner Abschlussrobe und meinem Diplom bei meiner Abschlussfeier",
+  "about.backgroundPresentation_1": "Ich habe es schon immer gemocht, Dinge zu verstehen – sei es Rätsel, Matheprobleme oder knifflige Bugs im Code. Diese Neugier führte mich dazu, Softwaretechnik an der Telecom Nancy zu studieren – einer französischen Ingenieurschule des Mines-Telecom-Instituts. Das generalistische Programm vermittelte mir ein starkes Fundament in allem von Algorithmen über Systemarchitektur bis hin zu künstlicher Intelligenz und Datenbanken, und erlaubte mir, flexibel in allen Bereichen der Entwicklung zu arbeiten und zwischen Programmiersprachen zu wechseln.",
+  "about.backgroundPresentation_2": "Seit 2021 arbeite ich als Full-Stack-Entwickler (meist mit dem MERN-Stack – MongoDB, Express.js, React.js, Node.js) und entwickle KI-basierte Chatbots, groß angelegte Webplattformen und benutzerfreundliche Oberflächen. Jetzt suche ich ein Team und ein Projekt, hinter dem ich wirklich stehen kann – etwas Sinnvolles, Nützliches, idealerweise mit ökologischem oder sozialem Fokus. Und natürlich ein Ort, an dem ich weiter lernen und wachsen kann, während ich mein neues Leben in der Schweiz aufbaue.",
+  "about.resumeIntroduction_1": "Wenn Sie mehr über meinen Hintergrund oder meine Fähigkeiten erfahren möchten, werfen Sie gerne einen Blick auf meinen Lebenslauf unten. Und wenn Sie Fragen haben oder einfach plaudern möchten, zögern Sie nicht, ",
+  "about.resumeIntroduction_link": "mich zu kontaktieren",
+  "about.resumeIntroduction_2": " – ich freue mich immer auf einen Austausch!",
+  "about.openResume": "Im PDF-Viewer öffnen",
+  "about.downloadResume": "Herunterladen",
+  "about.resume_alt": "Lebenslauf",
+
+  "projects.willExistSoon": "Diese Seite wird bald verfügbar sein, kommen Sie bald wieder!",
+  "projects.underConstruction": "Zeichnen: Seite im Aufbau",
+  "projects.gitHubRedirection": "Bis dahin finden Sie den Quellcode dieser Website auf meinem ",
+
+  "contact.title": "Lassen Sie uns in Kontakt treten!",
+  "contact.subTitle": "Schreiben Sie mir eine E-Mail!",
+  "contact.nameField": "Name",
+  "contact.emailField": "E-Mail",
+  "contact.subjectField": "Betreff",
+  "contact.messageField": "Nachricht",
+  "contact.sendButton": "Senden",
+  "contact.alternativeContact_1": "Alternativ senden Sie Ihre E-Mail direkt an ",
+  "contact.alternativeContact_2": " oder kontaktieren Sie mich auf ",
+  "contact.thankYou": "Vielen Dank für Ihre Nachricht!",
+  "contact.thankYou_2": "Ich melde mich in Kürze bei Ihnen.",
+  "contact.back": "Zurück",
+
+  "error": ""
+}

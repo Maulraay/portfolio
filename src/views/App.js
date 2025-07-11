@@ -1,14 +1,19 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import { Homepage } from "./homepage/Homepage";
 import { About } from "./about/About";
 import { Gallery } from "./gallery/Gallery";
 import { Contact } from "./contact/Contact";
-import {createTheme, ThemeProvider, useMediaQuery} from '@mui/material';
-import { createBrowserRouter, RouterProvider, Route, Link } from "react-router-dom";
 import { Error } from "./error/Error";
+import { createTheme, ThemeProvider, useMediaQuery } from '@mui/material';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { IntlProvider } from 'react-intl';
+import French from '../i18n/fr.json';
+import German from '../i18n/de.json';
+import English from '../i18n/en.json';
 
-const ThemeContext = React.createContext(null);
-export const useMyTheme = () => React.useContext(ThemeContext);
+
+const Context = React.createContext(null);
+export const useAppContext = () => React.useContext(Context);
 const appTheme = createTheme({
   colorSchemes: {},
   palette: {
@@ -101,12 +106,41 @@ const App = () =>{
     appTheme.colorSchemes.darkMode = theme === "dark";
   }, [theme]);
 
+  const [locale, setLocale] = useState('en');
+  const [messages, setMessages] = useState(English);
+
+  let lang = English; //default app language
+  let local = 'en';
+
+  useEffect(() => {
+    local = localStorage.getItem("locale");
+    if (!local) {
+      local = navigator.language?.slice(0, 2) || 'en';
+      localStorage.setItem("locale", local);
+    }
+    if (local==="de") lang = German
+    else if (local === "fr") lang = French
+    else lang = English;
+    setLocale(local);
+    setMessages(lang);
+  }, [])
+
+  function selectLanguage(newLocale) {
+    setLocale(newLocale);
+    localStorage.setItem("locale", newLocale);
+    if (newLocale === 'de') setMessages(German)
+    else if (newLocale === 'fr') setMessages(French)
+    else setMessages(English);
+  }
+
   return (
-    <ThemeContext.Provider value={{theme,setMyTheme}}>
+    <Context.Provider value={{theme, setMyTheme, locale, selectLanguage}}>
       <ThemeProvider theme={appTheme}>
-        <RouterProvider router={router}/>
+        <IntlProvider locale={locale} messages={messages}>
+          <RouterProvider router={router}/>
+        </IntlProvider>
       </ThemeProvider>
-    </ThemeContext.Provider>
+    </Context.Provider>
   )
 };
 

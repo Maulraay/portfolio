@@ -1,0 +1,53 @@
+{
+  "layout.header.logo_alt": "Logo stylisé Malaury Keslick",
+  "layout.header.home": "Accueil",
+  "layout.header.about": "Présentation",
+  "layout.header.projects": "Mes projets",
+  "layout.header.contact": "Contact",
+  "layout.header.darkMode_alt": "Bascule du mode sombre",
+
+  "layout.footer.copyright_alt": "Logo copyright",
+  "layout.footer.phone_alt": "Logo téléphone",
+  "layout.footer.learnMore": "Vous voulez en savoir plus ?",
+  "layout.footer.contact": "Programmons un appel!",
+
+  "homepage.hi": "Hey !",
+  "homepage.iAm": "Je suis Malaury Keslick",
+  "homepage.jobTitle": "Ingénieure Web et Logiciel spécialisée en Node.js",
+  "homepage.learnMore": "Envie d'en savoir plus ?",
+  "homepage.contact": "Contactez-moi !",
+  "homepage.picture": "Portrait principal",
+
+  "about.title": "Mon parcours et ma vision",
+  "about.personalPresentation_1": "Hey ! Moi, c’est Malaury, une développeuse web full-stack de 26 ans, originaire de France et installée aujourd’hui à Buchs, dans le canton de Saint-Gall, en Suisse. J’ai posé mes valises ici pour rejoindre mon conjoint et goûter enfin à une vie entourée de tout ce que j’aime : l’air pur, les montagnes, les lacs… et un rythme plus doux qui me laisse le temps de respirer et de créer librement.",
+  "about.personalPresentation_2": "Quand je ne suis pas en train de coder, vous me trouverez sûrement en train de chanter, de découvrir le piano, de dessiner, de cuisiner ou de me détendre sur un jeu vidéo cosy. J’ai toujours été guidée par la curiosité et l’envie de comprendre comment les choses fonctionnent - c’est sûrement ce qui m’a fait tomber amoureuse de l’informatique. Ce que j’aime par-dessus tout, c’est construire des choses utiles, claires, qui font gagner du temps… et pas l’inverse.",
+  "about.personalPresentation_portrait_alt": "Moi-même devant le lac et le château de Werdenberg, situé à Buchs SG, en Suisse",
+  "about.backgroundPresentation_portrait_alt": "Moi-même avec ma robe et mon diplôme lors de la cérémonie de remise des diplômes",
+  "about.backgroundPresentation_1": "J’ai toujours aimé résoudre des problèmes, qu’il s’agisse d’énigmes, de questions de logique ou de bugs complexes dans mon code. Cette curiosité m’a tout naturellement menée vers des études en ingénierie logicielle à Telecom Nancy, une école d’ingénieur française rattachée à l’institut Mines-Telecom. J’y ai suivi une formation généraliste exigeante, qui m’a permis d’acquérir de solides bases - de l’algorithmique à l’architecture système, en passant par l'intelligence artificielle et les bases de données - tout en explorant librement les différents aspects du développement et en changeant facilement de langage selon les besoins.",
+  "about.backgroundPresentation_2": "Depuis 2021, je travaille comme développeuse full-stack, principalement avec la stack MERN (MongoDB, Express.js, React.js, Node.js). J’ai eu l’occasion de concevoir des chatbots basés sur l’IA, des plateformes web à grande échelle, ainsi que des interfaces accessibles et intuitives. Aujourd’hui, je cherche une équipe et un projet dans lesquels je peux vraiment m’investir : quelque chose d’utile, de porteur de sens, idéalement avec une dimension environnementale ou sociale. Et bien sûr, un lieu où je peux continuer à apprendre, grandir et m’épanouir dans la nouvelle vie que je construis ici, en Suisse.",
+  "about.resumeIntroduction_1": "Si vous souhaitez en savoir plus sur mon parcours ou mes compétences, n’hésitez pas à consulter mon CV ci-dessous. Et si vous avez des questions ou simplement envie d’échanger, n’hésitez pas à ",
+  "about.resumeIntroduction_link": "me contacter",
+  "about.resumeIntroduction_2": " – je reviendrai vers vous le plus rapidement possible !",
+  "about.openResume": "Ouvrir dans un lecteur PDF",
+  "about.downloadResume": "Télécharger",
+  "about.resume_alt": "CV",
+
+  "projects.willExistSoon": "Cette page arrivera bientôt, revenez vite !",
+  "projects.underConstruction": "Dessin : page en cours de construction",
+  "projects.gitHubRedirection": "En attendant, vous pouvez trouver le code source de ce site sur mon ",
+
+  "contact.title": "Prenons contact !",
+  "contact.subTitle": "Envoyez-moi un email !",
+  "contact.nameField": "Nom",
+  "contact.emailField": "Email",
+  "contact.subjectField": "Sujet",
+  "contact.messageField": "Message",
+  "contact.sendButton": "Envoyer",
+  "contact.alternativeContact_1": "Sinon, envoyez directement votre email à ",
+  "contact.alternativeContact_2": " ou contactez-moi sur ",
+  "contact.thankYou": "Merci pour votre message !",
+  "contact.thankYou_2": "Je vous recontacte dès que possible.",
+  "contact.back": "Retour",
+
+  "error": ""
+}
