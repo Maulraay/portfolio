@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import "leaflet/dist/leaflet.css";
 import './styles.css';
 import { Layout } from "../layout/Layout";
 import { Typography, TextField, Box, Button, useTheme } from "@mui/material";
