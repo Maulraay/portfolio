@@ -9,9 +9,7 @@ import leftOrnament from "../../assets/left_ornament_contact.png";
 import rightOrnament from "../../assets/right_ornament_contact.png";
 import { FormattedMessage } from "react-intl";
 
-
 export const Contact = () => {
-
   const appTheme = useTheme();
   const {theme} = useAppContext();
   const useInputStyles = makeStyles({
@@ -53,6 +51,7 @@ export const Contact = () => {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -62,12 +61,31 @@ export const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    try {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/send-email`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
 
-    //mail sending logic goes here
-
-    setSubmitted(true);
+      const data = await res.json();
+      if (res.ok) {
+        setSubmitted(true);
+        setStatus('Message was successfully sent!');
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: '',
+        });
+      } else {
+        setStatus('Error : ' + data.error);
+      }
+    } catch (err) {
+      setStatus('Error on server connection');
+    }
   };
 
   return (

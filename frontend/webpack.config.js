@@ -1,4 +1,20 @@
+const webpack = require('webpack');
+const dotenv = require('dotenv');
 const path = require("path");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+// Récupérer NODE_ENV (development ou production)
+const mode = process.env.NODE_ENV || 'development';
+
+// Charger le bon .env.* automatiquement
+const envPath = `.env.${mode}`;
+const env = dotenv.config({ path: path.resolve(__dirname, envPath) }).parsed || {};
+
+// Convertir pour DefinePlugin
+const envKeys = Object.keys(env).reduce((acc, key) => {
+  acc[`process.env.${key}`] = JSON.stringify(env[key]);
+  return acc;
+}, {});
 
 /*We are basically telling webpack to take index.js from entry. Then check for all file extensions in resolve.
 After that apply all the rules in module.rules and produce the output and place it in main.js in the public folder.*/
@@ -8,7 +24,7 @@ module.exports={
    * the environment - development, production, none. tells webpack
    * to use its built-in optimizations accordingly. default is production
    */
-  mode: "development",
+  mode,
   /** "entry"
    * the entry point
    */
@@ -23,6 +39,7 @@ module.exports={
      */
     filename: "main.js"
   },
+  devtool: mode === 'development' ? 'eval-source-map' : 'source-map',
   /** "target"
    * setting "node" as target app (server side), and setting it as "web" is
    * for browser (client side). Default is "web"
@@ -82,5 +99,11 @@ module.exports={
         use: ['style-loader', 'css-loader']
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+    }),
+    new webpack.DefinePlugin(envKeys), // injecte les variables d'env
+  ],
 }
