@@ -24,27 +24,48 @@
     }
 
     .layout .header .menuIcon .MuiSvgIcon-root{
-        color: #3d383e;
+        color: var(--color-text-primary);
         font-size: xx-large;
     }
 
     .layout .menu {
-        position: fixed;
+        position: absolute;
         z-index: 1;
         right: 0;
+        bottom: 0;
         width: 30%;
-        height: 90%;
-        background-color: var(--color-bg);
-        border-left: lightgray 3px solid;
+        min-width: 220px;
+        height: 100%;
+        background-color: var(--color-primary);
     }
 }
+
+@media only screen and (max-width: 700px) {
+    .layout .footer .support {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 920px) {
+
+}
+
+@media only screen and (min-width: 700px) {
+    .layout .footer .support {
+        padding-right: 2%;
+        display: flex;
+        gap: 10px;
+    }
+}
+
 @media only screen and (min-width: 920px) {
     .layout .header .buttons {
-        width: 50%;
+        width: calc(70% - 30px);
         height: 45%;
         display: flex;
         margin-right: 15px;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 5%;
     }
 
     .layout .header .menuIcon {
@@ -52,15 +73,15 @@
     }
 
     .layout .header .darkModeToggle {
-        width: 10%;
+        width: 15%;
         height: 45%;
-        padding: 0 30px;
+        margin-right: 15px;
         display: flex;
-        gap: 40%;
+        justify-content: flex-end;
+        gap: 10%;
     }
 
     .layout .header .languageSelector{
-        width: 40%;
         background-color: var(--color-text-primary);
     }
 
@@ -128,20 +149,11 @@
     justify-content: space-between;
 }
 
+
 .layout .header .logo {
-    width: 10%;
+    width: 15%;
     margin-left: 15px;
     color: var(--color-text-primary)
-}
-
-.layout .header .MuiButtonBase-root{
-    border-color: var(--color-text-primary);
-    color: var(--color-text-primary);
-}
-
-.layout .header .buttons .MuiButtonBase-root:hover{
-    background-color: var(--color-text-primary);
-    color: var(--color-primary);
 }
 
 .layout .footer {
@@ -183,10 +195,14 @@
     color: var(--color-link-primary);
 }
 
-.layout .footer .support {
-    padding-right: 2%;
-    display: flex;
-    gap: 10px;
+.layout .MuiButtonBase-root{
+    border-color: var(--color-text-primary);
+    color: var(--color-text-primary);
+}
+
+.layout .MuiButtonBase-root:hover{
+    background-color: var(--color-text-primary);
+    color: var(--color-primary);
 }
 
 .layout .menu .buttons{

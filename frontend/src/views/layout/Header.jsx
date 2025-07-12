@@ -86,11 +86,10 @@ export const Header = (props) => {
   ));
 
   return(
-    <div className={"header"}>
+    <div className={"header"} style={props.menuState ? { opacity: "50%" } : null}>
       <a className={"logo"} href={'/'}>
         <img src={mainLogo} height={70} alt={<FormattedMessage id={"layout.header.logo_alt"} defaultMessage={"Malaury Keslick stylized logo"}/>}/>
       </a>
-
       <div className={"buttons"}>
         <Button variant={'outlined'} href={'/'}> <FormattedMessage id={"layout.header.home"} defaultMessage={"Home"}/> </Button>
         <Button variant={'outlined'} href={'/about'}> <FormattedMessage id={"layout.header.about"} defaultMessage={"About me"}/> </Button>
