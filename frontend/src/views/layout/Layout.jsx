@@ -10,12 +10,12 @@ export const Layout = (props) => {
 
   return (
     <div className={"layout"}>
-      <Header toggleMenu={setIsMenuOpened} menuState={isMenuOpened}/>
-      { isMenuOpened && <Menu/> || null }
-      <div className={isMenuOpened ? "bodyWithMenu" : "body"} onClick={isMenuOpened ? () => setIsMenuOpened(false) : null}>
+      <Header openMenu={() => setIsMenuOpened(true)} menuState={isMenuOpened}/>
+      { isMenuOpened && <Menu closeMenu={() => setIsMenuOpened(false)}/> || null }
+      <div className={`body${isMenuOpened ? " menuOpened" : ""}`} onClick={isMenuOpened ? () => setIsMenuOpened(false) : null}>
         { children }
       </div>
-      <Footer/>
+      <Footer menuState={isMenuOpened}/>
     </div>
   )
 }

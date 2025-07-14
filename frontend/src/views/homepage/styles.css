@@ -1,3 +1,87 @@
+@media only screen and (max-width: 399px) {
+    .homepage .buttons{
+        flex-direction: column;
+        width: fit-content;
+    }
+
+    .homepage .portrait {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    .homepage .buttons{
+        flex-direction: row;
+    }
+}
+
+@media only screen and (max-width: 829px) {
+    .background {
+        display: none;
+    }
+
+    .smallBackground {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        object-fit:  cover;
+        opacity: 30%;
+    }
+
+    .homepage {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .homepage .presentation{
+        flex: 1;
+        order: 2;
+        height: 40%;
+        margin-bottom: 10%;
+    }
+
+    .homepage .portrait {
+        flex: 1;
+        order: 1;
+        height: 45%;
+        margin-top: 5%;
+    }
+}
+
+@media only screen and (min-width: 830px) {
+    .smallBackground {
+        display: none;
+    }
+
+    .homepage {
+        flex-direction: row;
+    }
+
+    .homepage .presentation {
+        color: var(--color-text);
+        align-items: center;
+        align-content: center;
+        margin-left: 10%;
+    }
+
+    .homepage .portrait {
+        margin-right: 10%;
+    }
+}
+
+@media only screen and (min-width: 830px) and (max-width: 1300px) {
+    .homepage .portrait {
+        height: 50%;
+        max-width: 40%;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .homepage .portrait {
+        height: 70%;
+    }
+}
+
 .backgroundDiv {
     height: 100%;
     width: 100%;
@@ -8,6 +92,9 @@
 
 .background {
     position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -17,27 +104,24 @@
     height: 100%;
     position: absolute;
     display: flex;
-    flex-direction: row;
     align-items: center;
     align-content: center;
     justify-content: space-between;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .homepage .presentation {
     color: var(--color-text);
     align-items: center;
     align-content: center;
-    margin-left: 10%;
 }
 
 .homepage .portrait {
-    margin-right: 10%;
+    object-fit: contain;
 }
 
 .homepage .buttons{
     display: flex;
-    flex-direction: row;
     gap: 25px;
     margin-top: 25px;
 }
@@ -45,6 +129,7 @@
 .homepage .buttons .MuiButton-root{
     background-color: var(--color-secondary);
     color: var(--color-text-secondary);
+    white-space: nowrap;
 }
 
 .homepage .buttons .MuiButton-root:hover{

@@ -7,6 +7,13 @@ import { useAppContext } from "../App";
 import { FormattedMessage } from "react-intl";
 import { withStyles } from "@mui/styles";
 
+export const toggleTheme = (theme, setTheme) => {
+  const html = document.documentElement;
+  html.setAttribute('data-theme', theme === 'light' ? 'dark' : 'light');
+  localStorage.setItem("darkMode", theme === 'light' ? 'true' : 'false');
+  setTheme(theme === 'light' ? 'dark' : 'light');
+};
+
 export const Header = (props) => {
   const appTheme = useTheme();
   const { theme, setMyTheme, locale, selectLanguage } = useAppContext();
@@ -32,12 +39,7 @@ export const Header = (props) => {
     setMyTheme(currentTheme);
   }, [currentTheme]);
 
-  const toggleTheme = () => {
-    const html = document.documentElement;
-    html.setAttribute('data-theme', currentTheme === 'light' ? 'dark' : 'light');
-    localStorage.setItem("darkMode", currentTheme === 'light' ? 'true' : 'false');
-    setCurrentTheme(currentTheme === 'light' ? 'dark' : 'light');
-  };
+
 
   const [menuAnchorEl, setMenuAnchorEl] = React.useState(null);
   const isMenuOpened = Boolean(menuAnchorEl);
@@ -86,9 +88,9 @@ export const Header = (props) => {
   ));
 
   return(
-    <div className={"header"} style={props.menuState ? { opacity: "50%" } : null}>
-      <a className={"logo"} href={'/'}>
-        <img src={mainLogo} height={70} alt={<FormattedMessage id={"layout.header.logo_alt"} defaultMessage={"Malaury Keslick stylized logo"}/>}/>
+    <div className={`header${props.menuState ? " menuOpened" : ""}`}>
+      <a className={"logoContainer"} href={'/'}>
+        <img src={mainLogo} alt={<FormattedMessage id={"layout.header.logo_alt"} defaultMessage={"Malaury Keslick stylized logo"}/>}  className={"logo"}/>
       </a>
       <div className={"buttons"}>
         <Button variant={'outlined'} href={'/'}> <FormattedMessage id={"layout.header.home"} defaultMessage={"Home"}/> </Button>
@@ -114,12 +116,10 @@ export const Header = (props) => {
         >
           {dropdownMenu}
         </StyledMenu>
-        <IconButton className={"darkModeIcon"} onClick={() => toggleTheme()} alt={<FormattedMessage id={"layout.header.darkMode_alt"} defaultMessage={"Dark Mode toggle"}/>}>
+        <IconButton className={"darkModeIcon"} onClick={() => toggleTheme(currentTheme, setCurrentTheme)} alt={<FormattedMessage id={"layout.header.darkMode_alt"} defaultMessage={"Dark Mode toggle"}/>}>
           { currentTheme === 'dark' ? <DarkMode fontSize={"large"}/> : <DarkModeOutlined fontSize={"large"}/> }
         </IconButton>
-      </div>
-      <div className={"menuIcon"}>
-        <IconButton onClick={() => props.toggleMenu(!props.menuState)}>
+        <IconButton onClick={() => props.openMenu()} className={"menuIcon"}>
           <MenuIcon/>
         </IconButton>
       </div>

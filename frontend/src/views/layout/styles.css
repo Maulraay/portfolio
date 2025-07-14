@@ -13,13 +13,13 @@
         display: none;
     }
 
-    .layout .header .darkModeToggle {
+    .layout .header .darkModeIcon {
         display: none;
     }
 
     .layout .header .menuIcon {
         height: 100%;
-        margin-right: 15px;
+        margin: 0 15px;
         align-content: center;
     }
 
@@ -34,7 +34,7 @@
         right: 0;
         bottom: 0;
         width: 30%;
-        min-width: 220px;
+        min-width: 250px;
         height: 100%;
         background-color: var(--color-primary);
     }
@@ -123,25 +123,21 @@
     overflow: hidden;
 }
 
-.layout .body {
-    width: 100%;
-    height: 86%;
-    display: flex;
-    background-color: var(--color-bg);
+.menuOpened {
+    opacity: 50%;
 }
 
-.layout .bodyWithMenu {
+.layout .body {
     width: 100%;
-    height: 90%;
+    height: calc(100% - 110px);
     display: flex;
     background-color: var(--color-bg);
-    opacity: 50%;
 }
 
 .layout .header {
     display: flex;
     width: 100%;
-    height: 10%;
+    height: 80px;
     background-color: var(--color-primary);
     color: var(--color-text-primary);
     align-items: center;
@@ -150,16 +146,22 @@
 }
 
 
-.layout .header .logo {
+.layout .header .logoContainer {
+    height: 100%;
     width: 15%;
-    margin-left: 15px;
-    color: var(--color-text-primary)
+    position: relative;
+}
+
+.layout .header .logo {
+    position: absolute;
+    height: 90%;
+    margin: 3px 0;
 }
 
 .layout .footer {
     display: flex;
     width: 100%;
-    height: 4%;
+    height: 30px;
     background-color: var(--color-primary);
     color: var(--color-text-primary);
     align-content: center;
@@ -167,24 +169,25 @@
     justify-content: space-between;
 }
 
-.layout .footer .copyright {
+.layout .copyright {
     margin: 0 2%;
+    height: 30px;
     display: flex;
     align-content: center;
     align-items: center;
 }
 
-.layout .footer .copyright .copyrightLogo {
+.layout .copyright .copyrightLogo {
     color: var(--color-text-primary);
     margin-right: 5px;
 }
 
-.layout .footer .copyright .copyrightText {
+.layout .copyright .copyrightText {
     color: var(--color-text-primary);
     margin-top: 3px;
 }
 
-.layout .footer .copyright .socialNetworks{
+.layout .copyright .socialNetworks{
     padding-left: 15px;
     display: flex;
     align-content: center;
@@ -206,16 +209,32 @@
 }
 
 .layout .menu .buttons{
-    height: 35%;
-    width: 90%;
-    padding: 5%;
+    height: calc(100% - 160px);
+    width: calc(90% - 20px);
+    margin: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 10%;
+    align-items: center;
+}
+
+.layout .menu .topIcons{
+    display: flex;
+    height: 80px;
+    width: calc(100% - 10px);
+    align-items: center;
+}
+
+.layout .menu .topIcons .MuiSvgIcon-root{
+    color: var(--color-text-primary);
+    font-size: xxx-large;
+    margin-left: auto;
+    margin-right: 0;
 }
 
 .layout .menu .buttons .MuiButtonBase-root{
     text-align: center;
+    width: 100%;
 }
 
 /* Global styles */

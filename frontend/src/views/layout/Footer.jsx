@@ -6,11 +6,11 @@ import linkedin from "../../assets/linkedin.png";
 import github from "../../assets/github.png";
 import { FormattedMessage } from "react-intl";
 
-export const Footer = () => {
+export const Footer = (props) => {
 
   return(
-    <div className={'footer'}>
-      <div className={'copyright'}>
+    <div className={`footer${props.menuState ? " menuOpened" : ""}`}>
+      <div className={`copyright`} style={props.menuState ? { display: "none" } : {}}>
         <Copyright className={'copyrightLogo'} alt={<FormattedMessage id={"layout.footer.copyright_alt"} defaultMessage={"Copyright logo"}/>}/>
         <Typography variant={"button"} className={"copyrightText"}>
           {new Date().getFullYear()} - Maulray

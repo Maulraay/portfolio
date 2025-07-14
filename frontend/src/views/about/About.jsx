@@ -20,11 +20,11 @@ export const About = () => {
     <Layout>
       <div className={"about"}>
         <div className={"titleAndOrnaments"}>
-          <img src={leftOrnament} alt=""/>
-          <Typography variant={"h2"} fontSize={80} className={"title"}>
+          <img src={leftOrnament} alt="" className={"ornament"}/>
+          <Typography variant={"h2"} className={"title"}>
             <FormattedMessage id={"about.title"} defaultMessage={"A little bit more about me"}/>
           </Typography>
-          <img src={rightOrnament} alt=""/>
+          <img src={rightOrnament} alt="" className={"ornament"}/>
         </div>
         <div className={"globalPresentation"}>
           <div className={"text"}>
@@ -38,7 +38,7 @@ export const About = () => {
           <img src={meInBuchs} className={"picture"} width={"30%"} alt={<FormattedMessage id={"about.personalPresentation_portrait_alt"} defaultMessage={"Myself in front of the Werdenbergsee and castle, located in Buchs SG, Switzerland"}/>}/>
         </div>
         <div className={"divider"}/>
-        <div className={"background"}>
+        <div className={"backgroundPresentation"}>
           <img src={diploma} width={"30%"} className={"picture"} alt={<FormattedMessage id={"about.backgroundPresentation_portrait_alt"} defaultMessage={"Myself with my graduation gown and diploma at my graduation ceremony"}/>}/>
           <div className={"text"}>
             <Typography variant={"body1"} fontSize={21} align={"justify"}>

@@ -110,7 +110,7 @@ export const Contact = () => {
 
           ) : (
             <Box component="form" onSubmit={handleSubmit} className={"contactForm"}>
-              <Typography variant={"body1"} fontSize={30} className={"typography"}>
+              <Typography variant={"subtitle2"} className={"typography"}>
                 <FormattedMessage id={"contact.subTitle"} defaultMessage={"Send me an email!"}/>
               </Typography>
               <TextField

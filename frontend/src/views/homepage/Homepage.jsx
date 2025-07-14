@@ -4,6 +4,7 @@ import { Layout } from "../layout/Layout";
 import { Typography, Button } from "@mui/material";
 import portrait from "../../assets/portrait.png";
 import background from "../../assets/background.png";
+import smallBackground from "../../assets/background_small.png";
 import { FormattedMessage } from "react-intl";
 
 export const Homepage = () => {
@@ -11,15 +12,16 @@ export const Homepage = () => {
     <Layout>
       <div className={"backgroundDiv"}>
         <img src={background} className={"background"}/>
+        <img src={smallBackground} className={"smallBackground"}/>
         <div className={"homepage"}>
           <div className={"presentation"}>
-            <Typography variant={"h2"} fontSize={110} className={"title"}>
+            <Typography variant={"h1"} className={"title"}>
               <FormattedMessage id={"homepage.hi"} defaultMessage={"Hi!"}/>
             </Typography>
-            <Typography variant={"h2"} fontSize={110} className={"title"}>
+            <Typography variant={"h1"} className={"title"}>
               <FormattedMessage id={"homepage.iAm"} defaultMessage={"I am Malaury Keslick"}/>
             </Typography>
-            <Typography variant={"body1"} fontSize={50} className={"title"}>
+            <Typography variant={"subtitle1"} className={"title"}>
               <FormattedMessage id={"homepage.jobTitle"} defaultMessage={"A Node.js Web and Software Engineer"}/>
             </Typography>
             <div className={"buttons"}>
@@ -31,7 +33,7 @@ export const Homepage = () => {
               </Button>
             </div>
           </div>
-          <img className={"portrait"} src={portrait} height={"70%"} alt={<FormattedMessage id={"homepage.picture"} defaultMessage={"Main portrait"}/>}/>
+          <img className={"portrait"} src={portrait} alt={<FormattedMessage id={"homepage.picture"} defaultMessage={"Main portrait"}/>}/>
         </div>
       </div>
     </Layout>
