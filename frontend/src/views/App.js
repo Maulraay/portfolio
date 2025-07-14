@@ -66,24 +66,27 @@ const appTheme = createTheme({
   typography: {
     h1: {
       fontFamily: "Vina Sans",
-      fontSize: '3rem',
-      '@media (min-width:450px)': {
+      fontSize: '2rem',
+      '@media (min-width:380px)': {
+        fontSize: '3rem',
+      },
+      '@media (min-width:550px)': {
         fontSize: '4rem',
       },
-      '@media (min-width:700px)': {
+      '@media (min-width:720px)': {
         fontSize: '5rem',
       },
-      '@media (min-width:1300px)': {
+      '@media (min-width:1430px)': {
         fontSize: '7rem',
       },
     },
     subtitle1: {
       fontFamily: 'Mina',
       fontSize: '1rem',
-      '@media (min-width:700px)': {
+      '@media (min-width:720px)': {
         fontSize: '2rem',
       },
-      '@media (min-width:1300px)': {
+      '@media (min-width:1430px)': {
         fontSize: '3rem',
       },
     },

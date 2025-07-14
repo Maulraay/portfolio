@@ -8,7 +8,7 @@
 /* Large devices such as laptops (1024px and up) */
 /* Largest devices such as desktops (1280px and up) */
 
-@media only screen and (max-width: 920px) {
+@media only screen and (max-width: 1000px) {
     .layout .header .buttons {
         display: none;
     }
@@ -40,7 +40,7 @@
     }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1000px) {
     .layout .footer .support {
         display: none;
     }
@@ -50,7 +50,7 @@
 
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 1000px) {
     .layout .footer .support {
         padding-right: 2%;
         display: flex;
@@ -58,7 +58,7 @@
     }
 }
 
-@media only screen and (min-width: 920px) {
+@media only screen and (min-width: 1000px) {
     .layout .header .buttons {
         width: calc(70% - 30px);
         height: 45%;
@@ -79,25 +79,6 @@
         display: flex;
         justify-content: flex-end;
         gap: 10%;
-    }
-
-    .layout .header .languageSelector{
-        background-color: var(--color-text-primary);
-    }
-
-    .layout .header .languageSelector .icon{
-        color: var(--color-text-secondary);
-    }
-
-    .layout .header .languageSelector:hover .icon{
-        color: var(--color-text-secondary);
-        border-radius: 100%;
-        background-color: var(--color-secondary);
-    }
-
-    .layout .header .languageSelector .lang{
-        color: var(--color-text-secondary);
-        margin-left: 10px;
     }
 
     .layout .header .dropdownMenu .divider{
@@ -156,6 +137,26 @@
     position: absolute;
     height: 90%;
     margin: 3px 0;
+}
+
+
+.layout .header .languageSelector{
+    background-color: var(--color-text-primary);
+}
+
+.layout .header .languageSelector .icon{
+    color: var(--color-text-secondary);
+}
+
+.layout .header .languageSelector:hover .icon{
+    color: var(--color-text-secondary);
+    border-radius: 100%;
+    background-color: var(--color-secondary);
+}
+
+.layout .header .languageSelector .lang{
+    color: var(--color-text-secondary);
+    margin-left: 10px;
 }
 
 .layout .footer {

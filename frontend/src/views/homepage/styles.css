@@ -1,4 +1,4 @@
-@media only screen and (max-width: 399px) {
+@media only screen and (max-width: 599px) {
     .homepage .buttons{
         flex-direction: column;
         width: fit-content;
@@ -9,9 +9,10 @@
     }
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 600px) {
     .homepage .buttons{
         flex-direction: row;
+        min-width: 500px;
     }
 }
 
@@ -36,8 +37,9 @@
     .homepage .presentation{
         flex: 1;
         order: 2;
+        width: calc(100% - 100px);
         height: 40%;
-        margin-bottom: 10%;
+        margin: 0 50px 10% 50px;
     }
 
     .homepage .portrait {
@@ -62,6 +64,7 @@
         align-items: center;
         align-content: center;
         margin-left: 10%;
+        width: 50%;
     }
 
     .homepage .portrait {
@@ -69,7 +72,7 @@
     }
 }
 
-@media only screen and (min-width: 830px) and (max-width: 1300px) {
+@media only screen and (min-width: 830px) and (max-width: 1299px) {
     .homepage .portrait {
         height: 50%;
         max-width: 40%;
