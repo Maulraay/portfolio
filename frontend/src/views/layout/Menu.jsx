@@ -8,8 +8,15 @@ import {useAppContext} from "../App";
 import {toggleTheme} from "./Header";
 
 export const Menu = (props) => {
-  const { theme } = useAppContext();
+  const { theme, locale, selectLanguage } = useAppContext();
   const [currentTheme, setCurrentTheme] = useState(theme);
+
+  let languageList = ["English", "French", "Deutsch"];
+  const fullLocale = languageList.find((lang) => lang.slice(0, 2).toLowerCase() === locale);
+  languageList.unshift(fullLocale);
+  languageList = [...new Set(languageList)]; //we put current locale at the beginning of the list
+
+  const onLanguageClick = (event) => selectLanguage(event.target.textContent.slice(0, 2).toLowerCase());
 
   return (
     <div className={'menu'}>
@@ -17,7 +24,9 @@ export const Menu = (props) => {
         <IconButton className={"darkModeIcon"} onClick={() => toggleTheme(currentTheme, setCurrentTheme)} alt={<FormattedMessage id={"layout.header.darkMode_alt"} defaultMessage={"Dark Mode toggle"}/>}>
           { currentTheme === 'dark' ? <DarkMode fontSize={"large"}/> : <DarkModeOutlined fontSize={"large"}/> }
         </IconButton>
-        <Cancel onClick={() => props.closeMenu()}/>
+        <IconButton className={"closeMenuIcon"} onClick={() => props.closeMenu()}>
+          <Cancel/>
+        </IconButton>
       </div>
       <div className={'buttons'}>
         <Button variant={'outlined'} href={'/'}> <FormattedMessage id={"layout.header.home"} defaultMessage={"Home"}/> </Button>
@@ -25,9 +34,21 @@ export const Menu = (props) => {
         <Button variant={'outlined'} href={'/gallery'}> <FormattedMessage id={"layout.header.projects"} defaultMessage={"My projects"}/> </Button>
         <Button variant={'outlined'} href={'/contact'}> <FormattedMessage id={"layout.header.contact"} defaultMessage={"Contact"}/> </Button>
       </div>
+      <div className={"languageSelector"}>
+        {languageList.map((language) => (
+          <Typography
+            key={`${language}Button`}
+            variant={"button"}
+            className={"language"}
+            sx={language === fullLocale ?{ textDecoration: "underline", fontWeight: 'bold' } : null}
+            onClick={onLanguageClick}>
+            {language}
+          </Typography>
+        ))}
+      </div>
       <div className={`copyright`}>
         <Copyright className={'copyrightLogo'} alt={<FormattedMessage id={"layout.footer.copyright_alt"} defaultMessage={"Copyright logo"}/>}/>
-        <Typography variant={"button"} className={"copyrightText"}>
+        <Typography variant={"overline"} className={"copyrightText"}>
           {new Date().getFullYear()} - Maulray
         </Typography>
         <div className={"socialNetworks"}>

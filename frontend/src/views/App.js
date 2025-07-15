@@ -103,8 +103,14 @@ const appTheme = createTheme({
     },
     body1: {
       fontFamily: 'Mina'
+    },
+    button: {
+      fontSize: "0.8rem",
+      '@media (min-width:550px)': {
+        fontSize: '1rem',
+      },
     }
-  }
+  },
 });
 
 const router = createBrowserRouter([

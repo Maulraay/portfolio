@@ -25,10 +25,10 @@ export const Homepage = () => {
               <FormattedMessage id={"homepage.jobTitle"} defaultMessage={"A Node.js Web and Software Engineer"}/>
             </Typography>
             <div className={"buttons"}>
-              <Button href={'/about'} size={"large"}>
+              <Button href={'/about'}>
                 <FormattedMessage id={"homepage.learnMore"} defaultMessage={"Want to learn more ?"}/>
               </Button>
-              <Button href={'/contact'} size={"large"}>
+              <Button href={'/contact'}>
                 <FormattedMessage id={"homepage.contact"} defaultMessage={"Contact me!"}/>
               </Button>
             </div>

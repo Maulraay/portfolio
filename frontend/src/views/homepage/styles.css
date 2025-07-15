@@ -1,4 +1,30 @@
-@media only screen and (max-width: 599px) {
+@media only screen and (max-height: 559px){
+    .homepage .portrait {
+        display: none;
+    }
+
+    .homepage .presentation{
+        width: calc(100% - 60px);
+        height: 100%;
+        margin: 0 30px 20px 60px;
+        overflow-y: auto;
+        overflow-x:  hidden;
+    }
+}
+
+@media only screen and (min-height: 560px){
+    .homepage .presentation{
+        flex: 1;
+        order: 2;
+        width: calc(100% - 60px);
+        height: 40%;
+        margin: 0 30px 10% 60px;
+        overflow-y: auto;
+        overflow-x:  hidden;
+    }
+}
+
+@media only screen and (max-width: 614px) {
     .homepage .buttons{
         flex-direction: column;
         width: fit-content;
@@ -9,7 +35,7 @@
     }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 615px) {
     .homepage .buttons{
         flex-direction: row;
         min-width: 500px;
@@ -34,18 +60,13 @@
         height: 100%;
     }
 
-    .homepage .presentation{
-        flex: 1;
-        order: 2;
-        width: calc(100% - 100px);
-        height: 40%;
-        margin: 0 50px 10% 50px;
-    }
-
     .homepage .portrait {
         flex: 1;
         order: 1;
-        height: 45%;
+        height: 25%;
+        min-height: 265px;
+        width: 70%;
+        min-width: 225px;
         margin-top: 5%;
     }
 }
@@ -133,6 +154,7 @@
     background-color: var(--color-secondary);
     color: var(--color-text-secondary);
     white-space: nowrap;
+    width: auto;
 }
 
 .homepage .buttons .MuiButton-root:hover{

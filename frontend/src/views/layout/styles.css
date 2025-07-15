@@ -2,13 +2,83 @@
 @import '../../colorPalette/light.css';
 @import '../../colorPalette/dark.css';
 
+@media only screen and (max-height: 559px){
+    .layout .menu .buttons{
+        height: calc(75% - 160px);
+    }
 
-/* Small devices such as large phones (640px and up) */
-/* Medium devices such as tablets (768px and up) */
-/* Large devices such as laptops (1024px and up) */
-/* Largest devices such as desktops (1280px and up) */
+    .layout .menu .languageSelector{
+        height: 25%;
+    }
+}
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (min-height: 560px){
+    .layout .menu .buttons{
+        height: calc(60% - 160px);
+    }
+
+    .layout .menu .languageSelector{
+        height: 40%;
+    }
+}
+
+@media only screen and (max-width: 374px) {
+    .layout .header .languageSelector{
+        display: none;
+    }
+
+    .layout .menu .languageSelector{
+        width: 100%;
+        color: var(--color-text-primary);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3%;
+    }
+
+    .layout .menu .languageSelector .language{
+        text-align: center;
+        cursor: pointer;
+        width: 50%;
+        border-radius: 20px;
+    }
+
+    .layout .menu .languageSelector .language:hover{
+        background-color: var(--color-secondary);
+        color: var(--color-text-secondary);
+    }
+}
+
+@media only screen and (min-width: 375px) {
+    .layout .menu .languageSelector{
+        display: none;
+    }
+
+    .layout .menu .buttons{
+        height: calc(100% - 160px);
+    }
+
+    .layout .header .languageSelector{
+        background-color: var(--color-text-primary);
+    }
+
+    .layout .header .languageSelector .icon{
+        color: var(--color-text-secondary);
+    }
+
+    .layout .header .languageSelector:hover .icon{
+        color: var(--color-text-secondary);
+        border-radius: 100%;
+        background-color: var(--color-secondary);
+    }
+
+    .layout .header .languageSelector .lang{
+        color: var(--color-text-secondary);
+        margin-left: 10px;
+    }
+}
+
+@media only screen and (max-width: 999px) {
     .layout .header .buttons {
         display: none;
     }
@@ -24,7 +94,6 @@
     }
 
     .layout .header .menuIcon .MuiSvgIcon-root{
-        color: var(--color-text-primary);
         font-size: xx-large;
     }
 
@@ -38,23 +107,9 @@
         height: 100%;
         background-color: var(--color-primary);
     }
-}
 
-@media only screen and (max-width: 1000px) {
     .layout .footer .support {
         display: none;
-    }
-}
-
-@media only screen and (min-width: 700px) and (max-width: 920px) {
-
-}
-
-@media only screen and (min-width: 1000px) {
-    .layout .footer .support {
-        padding-right: 2%;
-        display: flex;
-        gap: 10px;
     }
 }
 
@@ -89,8 +144,13 @@
 
     .layout .header .darkModeToggle .darkModeIcon{
         float: right;
-        color: var(--color-text-primary);
         width: 20%;
+    }
+
+    .layout .footer .support {
+        padding-right: 2%;
+        display: flex;
+        gap: 10px;
     }
 
     .layout .menu {
@@ -137,26 +197,6 @@
     position: absolute;
     height: 90%;
     margin: 3px 0;
-}
-
-
-.layout .header .languageSelector{
-    background-color: var(--color-text-primary);
-}
-
-.layout .header .languageSelector .icon{
-    color: var(--color-text-secondary);
-}
-
-.layout .header .languageSelector:hover .icon{
-    color: var(--color-text-secondary);
-    border-radius: 100%;
-    background-color: var(--color-secondary);
-}
-
-.layout .header .languageSelector .lang{
-    color: var(--color-text-secondary);
-    margin-left: 10px;
 }
 
 .layout .footer {
@@ -209,8 +249,24 @@
     color: var(--color-primary);
 }
 
+.layout .menu .topIcons{
+    display: flex;
+    height: 80px;
+    margin: 0 10px;
+    width: calc(100% - 20px);
+    align-items: center;
+}
+
+.layout .menu .topIcons .closeMenuIcon{
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.layout .menu .topIcons .closeMenuIcon .MuiSvgIcon-root{
+    font-size: xx-large;
+}
+
 .layout .menu .buttons{
-    height: calc(100% - 160px);
     width: calc(90% - 20px);
     margin: 20px;
     display: flex;
@@ -219,19 +275,6 @@
     align-items: center;
 }
 
-.layout .menu .topIcons{
-    display: flex;
-    height: 80px;
-    width: calc(100% - 10px);
-    align-items: center;
-}
-
-.layout .menu .topIcons .MuiSvgIcon-root{
-    color: var(--color-text-primary);
-    font-size: xxx-large;
-    margin-left: auto;
-    margin-right: 0;
-}
 
 .layout .menu .buttons .MuiButtonBase-root{
     text-align: center;
@@ -246,4 +289,25 @@
 .MuiTypography-h2 {
     display: flex;
     flex-wrap: wrap;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: var(--color-secondary);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: var(--color-secondary);
 }

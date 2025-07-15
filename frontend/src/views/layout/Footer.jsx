@@ -12,7 +12,7 @@ export const Footer = (props) => {
     <div className={`footer${props.menuState ? " menuOpened" : ""}`}>
       <div className={`copyright`} style={props.menuState ? { display: "none" } : {}}>
         <Copyright className={'copyrightLogo'} alt={<FormattedMessage id={"layout.footer.copyright_alt"} defaultMessage={"Copyright logo"}/>}/>
-        <Typography variant={"button"} className={"copyrightText"}>
+        <Typography variant={"overline"} className={"copyrightText"}>
           {new Date().getFullYear()} - Maulray
         </Typography>
         <div className={"socialNetworks"}>
