@@ -92,17 +92,58 @@ const appTheme = createTheme({
     },
     h2: {
       fontFamily: "Vina Sans",
-      fontSize: '4rem',
-      '@media (min-width:1100px)': {
+      fontSize: '2rem',
+      '@media (min-width:600px)': {
+        fontSize: '3rem',
+      },
+      '@media (min-width:750px)': {
+        fontSize: '3.5rem',
+      },
+      '@media (min-width:1400px)': {
+        fontSize: '4rem',
+      },
+      '@media (min-width:1600px)': {
         fontSize: '5rem',
       },
     },
     subtitle2: {
       fontFamily: 'Mina',
-      fontSize: '2rem',
+      fontSize: '1rem',
+      '@media (min-width:600px)': {
+        fontSize: '1.5rem',
+      },
+      '@media (min-width:1600px)': {
+        fontSize: '2rem',
+      },
     },
     body1: {
       fontFamily: 'Mina'
+    },
+    h3: {
+      fontFamily: 'Mina',
+      fontSize: '2.5rem',
+      '@media (min-width:600px)': {
+        fontSize: '3rem',
+      },
+      '@media (min-width:750px)': {
+        fontSize: '3.5rem',
+      },
+      '@media (min-width:1400px)': {
+        fontSize: '4rem',
+      }
+    },
+    body2: {
+      fontFamily: 'Mina',
+      fontSize: '1.5rem',
+      '@media (min-width:600px)': {
+        fontSize: '2rem',
+      },
+      '@media (min-width:750px)': {
+        fontSize: '2.5rem',
+      },
+      '@media (min-width:1400px)': {
+        fontSize: '3rem',
+      }
     },
     button: {
       fontSize: "0.8rem",

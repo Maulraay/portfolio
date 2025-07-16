@@ -97,10 +97,10 @@ export const Contact = () => {
         <div className={"mailPanel"}>
           {submitted ? (
             <div className={"thankYou"}>
-              <Typography variant="body1" fontSize={50}>
+              <Typography variant="h3">
                 <FormattedMessage id={"contact.thankYou"} defaultMessage={"Thank you for your message!"}/>
               </Typography>
-              <Typography variant="body1" fontSize={30}>
+              <Typography variant="body2">
                 <FormattedMessage id={"contact.thankYou_2"} defaultMessage={"I will get back to you soon."}/>
               </Typography>
               <Button className={"backButton"} variant="contained" href={"/contact"}>
