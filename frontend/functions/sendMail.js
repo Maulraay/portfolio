@@ -21,9 +21,9 @@ exports.handler = async function(event, context) {
   try {
     await transporter.sendMail({
       from: email,
-      to: process.env.MAIL_USER,
+      to: process.env.EMAIL_USER,
       subject: `[PORTFOLIO] ${subject}`,
-      text: `[Sent by ${email}]\n${message}`
+      text: `[Sent by ${name}@${email}]\n${message}`
     });
 
     return {
