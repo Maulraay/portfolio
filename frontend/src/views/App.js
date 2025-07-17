@@ -117,7 +117,12 @@ const appTheme = createTheme({
       },
     },
     body1: {
-      fontFamily: 'Mina'
+      fontFamily: 'Mina',
+    },
+    about: {
+      '@media (min-width:850px)': {
+        fontSize: '1.5rem',
+      },
     },
     h3: {
       fontFamily: 'Mina',
@@ -151,6 +156,20 @@ const appTheme = createTheme({
         fontSize: '1rem',
       },
     }
+  },
+  components: {
+    MuiTypography: {
+      variants: [
+        {
+          props: { variant: 'about' },
+          style: {
+            fontFamily: 'Mina',
+            fontSize: '1rem',
+            lineHeight: 1.5,
+          },
+        },
+      ],
+    },
   },
 });
 

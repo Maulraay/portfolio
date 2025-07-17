@@ -1,4 +1,3 @@
-/* Small devices such as large phones (640px and up) */
 @media only screen and (max-width: 1024px) {
     .contact .mailPanel {
         width: 50%;
@@ -24,7 +23,6 @@
     }
 }
 
-/* Large devices such as laptops (1024px and up) */
 @media only screen and (min-width: 750px) {
     .contact .mailPanel {
         width: 80%;
