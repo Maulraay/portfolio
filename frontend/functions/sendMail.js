@@ -1,0 +1,39 @@
+const nodemailer = require('nodemailer');
+
+exports.handler = async function(event, context) {
+  const { name, email, subject, message } = JSON.parse(event.body || '{}');
+
+  if (!name || !email || !message) {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({ error: "Missing required fields" })
+    };
+  }
+
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS
+    }
+  });
+
+  try {
+    await transporter.sendMail({
+      from: email,
+      to: process.env.MAIL_USER,
+      subject: `[PORTFOLIO] ${subject}`,
+      text: `[Sent by ${email}]\n${message}`
+    });
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ success: true })
+    };
+  } catch (error) {
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: error.message })
+    };
+  }
+};

@@ -28,7 +28,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
-app.post('/send-email', async (req, res) => {
+app.post('/sendMail', async (req, res) => {
   const { name, email, subject, message } = req.body;
 
   const transporter = nodemailer.createTransport({
