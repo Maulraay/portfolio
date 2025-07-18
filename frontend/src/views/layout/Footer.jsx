@@ -2,8 +2,8 @@ import React from "react";
 import './styles.css';
 import { IconButton, Typography } from "@mui/material";
 import { Copyright, LocalPhone } from "@mui/icons-material";
-import linkedin from "../../assets/linkedin.png";
-import github from "../../assets/github.png";
+import linkedin from "../../../public/assets/linkedin.png";
+import github from "../../../public/assets/github.png";
 import { FormattedMessage } from "react-intl";
 
 export const Footer = (props) => {
@@ -17,10 +17,10 @@ export const Footer = (props) => {
         </Typography>
         <div className={"socialNetworks"}>
           <IconButton href={"https://www.linkedin.com/in/malaurykeslick/"} target={"_blank"} rel={"noopener noreferrer"}>
-            <img src={linkedin} height={"20px"} alt={"LinkedIn redirection"}/>
+            <img src={linkedin} height={"20px"} alt={"LinkedIn redirection"} loading="lazy"/>
           </IconButton>
           <IconButton href={"https://github.com/Maulraay"} target={"_blank"} rel={"noopener noreferrer"}>
-            <img src={github} height={"20px"} alt={"GitHub redirection"}/>
+            <img src={github} height={"20px"} alt={"GitHub redirection"} loading="lazy"/>
           </IconButton>
         </div>
       </div>

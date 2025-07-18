@@ -4,8 +4,8 @@ import { Layout } from "../layout/Layout";
 import { Typography, TextField, Box, Button, useTheme } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { useAppContext } from "../App";
-import leftOrnament from "../../assets/left_ornament_contact.png";
-import rightOrnament from "../../assets/right_ornament_contact.png";
+import leftOrnament from "../../../public/assets/left_ornament_contact.png";
+import rightOrnament from "../../../public/assets/right_ornament_contact.png";
 import { FormattedMessage } from "react-intl";
 
 export const Contact = () => {
@@ -90,7 +90,7 @@ export const Contact = () => {
   return (
     <Layout>
       <div className={"contact"}>
-        <img src={leftOrnament} className={"leftOrnament"} alt={""}/>
+        <img src={leftOrnament} className={"leftOrnament"} alt={""} loading="lazy"/>
         <Typography variant={"h2"} className={"title"}>
           <FormattedMessage id={"contact.title"} defaultMessage={"Let's get in touch!"}/>
         </Typography>
@@ -176,7 +176,7 @@ export const Contact = () => {
             </Box>
           )}
         </div>
-        <img src={rightOrnament} className={"rightOrnament"} alt={""}/>
+        <img src={rightOrnament} className={"rightOrnament"} alt={""} loading="lazy"/>
       </div>
     </Layout>
   )

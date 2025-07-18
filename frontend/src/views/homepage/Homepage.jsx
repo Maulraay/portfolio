@@ -2,17 +2,17 @@ import React from "react";
 import './styles.css';
 import { Layout } from "../layout/Layout";
 import { Typography, Button } from "@mui/material";
-import portrait from "../../assets/portrait.png";
-import background from "../../assets/background.png";
-import smallBackground from "../../assets/background_small.png";
+import portrait from "../../../public/assets/portrait.png";
+import background from "../../../public/assets/background.png";
+import smallBackground from "../../../public/assets/background_small.png";
 import { FormattedMessage } from "react-intl";
 
 export const Homepage = () => {
   return(
     <Layout>
       <div className={"backgroundDiv"}>
-        <img src={background} className={"background"}/>
-        <img src={smallBackground} className={"smallBackground"}/>
+        <img src={background} className={"background"} loading="lazy"/>
+        <img src={smallBackground} className={"smallBackground"} loading="lazy"/>
         <div className={"homepage"}>
           <div className={"presentation"}>
             <Typography variant={"h1"} className={"title"}>
@@ -33,7 +33,7 @@ export const Homepage = () => {
               </Button>
             </div>
           </div>
-          <img className={"portrait"} src={portrait} alt={<FormattedMessage id={"homepage.picture"} defaultMessage={"Main portrait"}/>}/>
+          <img className={"portrait"} src={portrait} alt={<FormattedMessage id={"homepage.picture"} defaultMessage={"Main portrait"}/>} loading="lazy"/>
         </div>
       </div>
     </Layout>

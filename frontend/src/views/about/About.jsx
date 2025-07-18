@@ -2,13 +2,13 @@ import React from "react";
 import './styles.css';
 import { Layout } from "../layout/Layout";
 import { Button, Typography } from "@mui/material";
-import meInBuchs from "../../assets/meInBuchs.png";
-import diploma from "../../assets/diplome.png";
-import resume_en from "../../assets/resume_en.png";
-import resume_fr from "../../assets/resume_fr.png";
-import resume_de from "../../assets/resume_de.png";
-import leftOrnament from "../../assets/left_ornament_about.png";
-import rightOrnament from "../../assets/right_ornament_about.png";
+import meInBuchs from "../../../public/assets/meInBuchs.png";
+import diploma from "../../../public/assets/diplome.png";
+import resume_en from "../../../public/assets/resume_en.png";
+import resume_fr from "../../../public/assets/resume_fr.png";
+import resume_de from "../../../public/assets/resume_de.png";
+import leftOrnament from "../../../public/assets/left_ornament_about.png";
+import rightOrnament from "../../../public/assets/right_ornament_about.png";
 import { FormattedMessage } from "react-intl";
 import { useAppContext } from "../App";
 import PictureViewer from "../components/PictureViewer";
@@ -21,11 +21,11 @@ export const About = () => {
     <Layout>
       <div className={"about"}>
         <div className={"titleAndOrnaments"}>
-          <img src={leftOrnament} alt="" className={"ornament"}/>
+          <img src={leftOrnament} alt="" className={"ornament"} loading="lazy"/>
           <Typography variant={"h2"} className={"title"}>
             <FormattedMessage id={"about.title"} defaultMessage={"A little bit more about me"}/>
           </Typography>
-          <img src={rightOrnament} alt="" className={"ornament"}/>
+          <img src={rightOrnament} alt="" className={"ornament"} loading="lazy"/>
         </div>
         <div className={"globalPresentation"}>
           <div className={"text"}>

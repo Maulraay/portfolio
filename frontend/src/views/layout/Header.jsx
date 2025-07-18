@@ -2,7 +2,7 @@ import React, {useEffect, useRef, useState} from "react";
 import './styles.css';
 import { Button, IconButton, Menu, MenuItem, useMediaQuery, useTheme } from "@mui/material";
 import { Menu as MenuIcon, DarkMode, DarkModeOutlined, KeyboardArrowDown } from "@mui/icons-material";
-import mainLogo from "../../assets/logo.png";
+import mainLogo from "../../../public/assets/logo.png";
 import { useAppContext } from "../App";
 import { FormattedMessage } from "react-intl";
 import { withStyles } from "@mui/styles";
@@ -18,22 +18,32 @@ export const Header = (props) => {
   const appTheme = useTheme();
   const { theme, setMyTheme, locale, selectLanguage } = useAppContext();
 
-  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+  const prefersDarkMode = typeof window !== 'undefined' ? useMediaQuery('(prefers-color-scheme: dark)') : false;
   const [currentTheme, setCurrentTheme] = useState(prefersDarkMode ? 'dark' : 'light');
 
   useEffect(() => {
-    const html = document.documentElement;
-    if (!localStorage.getItem("darkMode")) {
-      html.setAttribute('data-theme', prefersDarkMode ? 'dark' : 'light');
-      setCurrentTheme(prefersDarkMode ? 'dark' : 'light');
-      localStorage.setItem("darkMode", prefersDarkMode.toString());
+    if (typeof window === 'undefined') return;
+
+    try {
+      const html = document.documentElement;
+      if (!localStorage.getItem("darkMode")) {
+        html.setAttribute('data-theme', prefersDarkMode ? 'dark' : 'light');
+        setCurrentTheme(prefersDarkMode ? 'dark' : 'light');
+        localStorage.setItem("darkMode", prefersDarkMode.toString());
+      }
+      else {
+        const darkMode = localStorage.getItem('darkMode') === "true";
+        html.setAttribute('data-theme', darkMode ? 'dark' : 'light');
+        setCurrentTheme(darkMode ? 'dark' : 'light');
+      }
     }
-    else {
-      const darkMode = localStorage.getItem('darkMode') === "true";
-      html.setAttribute('data-theme', darkMode ? 'dark' : 'light');
-      setCurrentTheme(darkMode ? 'dark' : 'light');
+    catch (e) {
+      console.warn("Failed to access darkMode preference:", e);
+      setCurrentTheme('light');
+      localStorage.setItem("darkMode", "false");
     }
-  }, []);
+
+  }, [prefersDarkMode]);
 
   useEffect(() => {
     setMyTheme(currentTheme);
@@ -90,7 +100,7 @@ export const Header = (props) => {
   return(
     <div className={`header${props.menuState ? " menuOpened" : ""}`}>
       <a className={"logoContainer"} href={'/'}>
-        <img src={mainLogo} alt={<FormattedMessage id={"layout.header.logo_alt"} defaultMessage={"Malaury Keslick stylized logo"}/>}  className={"logo"}/>
+        <img src={mainLogo} alt={<FormattedMessage id={"layout.header.logo_alt"} defaultMessage={"Malaury Keslick stylized logo"}/>} className={"logo"} loading="lazy"/>
       </a>
       <div className={"buttons"}>
         <Button variant={'outlined'} href={'/'}> <FormattedMessage id={"layout.header.home"} defaultMessage={"Home"}/> </Button>

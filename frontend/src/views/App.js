@@ -211,16 +211,26 @@ const App = () =>{
   let local = 'en';
 
   useEffect(() => {
-    local = localStorage.getItem("locale");
-    if (!local) {
-      local = navigator.language?.slice(0, 2) || 'en';
-      localStorage.setItem("locale", local);
+    if (typeof window === 'undefined') return;
+
+    try {
+      local = localStorage.getItem("locale");
+      if (!local) {
+        local = navigator.language?.slice(0, 2) || 'en';
+        localStorage.setItem("locale", local);
+      }
+      lang =
+        (local==="de") ? German :
+          (local === "fr") ? French :
+            English;
+      setLocale(local);
+      setMessages(lang);
     }
-    if (local==="de") lang = German
-    else if (local === "fr") lang = French
-    else lang = English;
-    setLocale(local);
-    setMessages(lang);
+    catch (e) {
+      console.warn("Failed to load locale:", e);
+      setLocale("en");
+      setMessages(English);
+    }
   }, [])
 
   function selectLanguage(newLocale) {

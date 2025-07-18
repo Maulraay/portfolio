@@ -2,8 +2,8 @@ import React, {useState} from "react";
 import {Button, IconButton, Typography} from "@mui/material";
 import {Cancel, Clear, Copyright, DarkMode, DarkModeOutlined} from "@mui/icons-material";
 import { FormattedMessage } from "react-intl";
-import linkedin from "../../assets/linkedin.png";
-import github from "../../assets/github.png";
+import linkedin from "../../../public/assets/linkedin.png";
+import github from "../../../public/assets/github.png";
 import {useAppContext} from "../App";
 import {toggleTheme} from "./Header";
 
@@ -53,10 +53,10 @@ export const Menu = (props) => {
         </Typography>
         <div className={"socialNetworks"}>
           <IconButton href={"https://www.linkedin.com/in/malaurykeslick/"} target={"_blank"} rel={"noopener noreferrer"}>
-            <img src={linkedin} height={"20px"} alt={"LinkedIn redirection"}/>
+            <img src={linkedin} height={"20px"} alt={"LinkedIn redirection"} loading="lazy"/>
           </IconButton>
           <IconButton href={"https://github.com/Maulraay"} target={"_blank"} rel={"noopener noreferrer"}>
-            <img src={github} height={"20px"} alt={"GitHub redirection"}/>
+            <img src={github} height={"20px"} alt={"GitHub redirection"} loading="lazy"/>
           </IconButton>
         </div>
       </div>
