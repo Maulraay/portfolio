@@ -124,6 +124,14 @@ const appTheme = createTheme({
         fontSize: '1.5rem',
       },
     },
+    projects: {
+      '@media (min-width:600px)': {
+        fontSize: '2rem',
+      },
+      '@media (min-width:1600px)': {
+        fontSize: '3rem',
+      },
+    },
     h3: {
       fontFamily: 'Mina',
       fontSize: '2.5rem',
@@ -166,6 +174,13 @@ const appTheme = createTheme({
             fontFamily: 'Mina',
             fontSize: '1rem',
             lineHeight: 1.5,
+          },
+        },
+        {
+          props: { variant: 'projects' },
+          style: {
+            fontFamily: 'Mina',
+            fontSize: '1.5rem',
           },
         },
       ],

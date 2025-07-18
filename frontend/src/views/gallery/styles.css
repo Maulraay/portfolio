@@ -5,11 +5,41 @@
     flex-direction: column;
     align-items: center;
     align-content: center;
+    position: relative;
+}
+
+@media only screen and (max-height: 574px){
+    .gallery .title{
+        height: 50%;
+    }
+
+    .gallery .underConstruction{
+        top: 50%;
+        transform: translateY(-50%);
+        height: 80%;
+        opacity: 20%;
+        position: absolute;
+    }
+}
+
+@media only screen and (min-height: 575px){
+    .gallery .title{
+        height: 20%;
+    }
+
+    .gallery .underConstruction{
+        height: 60%;
+    }
 }
 
 .gallery .title{
-    height: calc(20% - 20px);
     color: var(--color-text);
     align-items: center;
     align-content: center;
+    text-align: center;
+}
+
+.gallery .underConstruction{
+    width: 90%;
+    object-fit: contain;
 }
