@@ -60,10 +60,10 @@ export const About = () => {
             <FormattedMessage id={"about.resumeIntroduction_2"} defaultMessage={" - I am always happy to connect!"}/>
           </Typography>
           <div className={"buttons"}>
-            <Button href={`/assets/resume_${locale}.pdf`} size={"large"} target={"_blank"} rel={"noopener noreferrer"}>
+            <Button href={`../../../public/assets/resume_${locale}.pdf`} size={"large"} target={"_blank"} rel={"noopener noreferrer"}>
               <FormattedMessage id={"about.openResume"} defaultMessage={"Open in pdf-viewer"}/>
             </Button>
-            <Button href={`/assets/resume_${locale}.pdf`} size={"large"} target={"_blank"} rel={"noopener noreferrer"} download={true}>
+            <Button href={`../../../public/assets/resume_${locale}.pdf`} size={"large"} target={"_blank"} rel={"noopener noreferrer"} download={true}>
               <FormattedMessage id={"about.downloadResume"} defaultMessage={"Download"}/>
             </Button>
           </div>
