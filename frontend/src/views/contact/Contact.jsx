@@ -5,8 +5,6 @@ import { Typography, TextField, Box, Button, useTheme } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { FormattedMessage } from "react-intl";
 import { useAppContext } from "../App";
-import leftOrnament from "../../../public/assets/left_ornament_contact.png";
-import rightOrnament from "../../../public/assets/right_ornament_contact.png";
 
 export const Contact = () => {
   const appTheme = useTheme();
@@ -90,7 +88,7 @@ export const Contact = () => {
   return (
     <Layout>
       <div className={"contact"}>
-        <img src={leftOrnament} className={"leftOrnament"} alt={""} loading="lazy"/>
+        <img src={"/assets/left_ornament_contact.png"} className={"leftOrnament"} alt={""} loading="lazy"/>
         <Typography variant={"h2"} className={"title"}>
           <FormattedMessage id={"contact.title"} defaultMessage={"Let's get in touch!"}/>
         </Typography>
@@ -176,7 +174,7 @@ export const Contact = () => {
             </Box>
           )}
         </div>
-        <img src={rightOrnament} className={"rightOrnament"} alt={""} loading="lazy"/>
+        <img src={"/assets/right_ornament_contact.png"} className={"rightOrnament"} alt={""} loading="lazy"/>
       </div>
     </Layout>
   )

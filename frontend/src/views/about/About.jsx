@@ -5,29 +5,21 @@ import { Button, Typography } from "@mui/material";
 import { FormattedMessage, useIntl } from "react-intl";
 import { useAppContext } from "../App";
 import PictureViewer from "../components/PictureViewer";
-import meInBuchs from "../../../public/assets/meInBuchs.png";
-import diploma from "../../../public/assets/diplome.png";
-import resume_en from "../../../public/assets/resume_en.png";
-import resume_fr from "../../../public/assets/resume_fr.png";
-import resume_de from "../../../public/assets/resume_de.png";
-import leftOrnament from "../../../public/assets/left_ornament_about.png";
-import rightOrnament from "../../../public/assets/right_ornament_about.png";
 
 export const About = () => {
   const intl = useIntl();
 
   const { locale } = useAppContext();
-  const resume = locale === "de" ? resume_de : locale === "fr" ? resume_fr : resume_en;
 
   return (
     <Layout>
       <div className={"about"}>
         <div className={"titleAndOrnaments"}>
-          <img src={leftOrnament} alt="" className={"ornament"} loading="lazy"/>
+          <img src={"/assets/left_ornament_about.png"} alt="" className={"ornament"} loading="lazy"/>
           <Typography variant={"h2"} className={"title"}>
             <FormattedMessage id={"about.title"} defaultMessage={"A little bit more about me"}/>
           </Typography>
-          <img src={rightOrnament} alt="" className={"ornament"} loading="lazy"/>
+          <img src={"/assets/right_ornament_about.png"} alt="" className={"ornament"} loading="lazy"/>
         </div>
         <div className={"globalPresentation"}>
           <div className={"text"}>
@@ -38,11 +30,11 @@ export const About = () => {
               <FormattedMessage id={"about.personalPresentation_2"} defaultMessage={"When I’m not deep into code, you’ll probably find me singing, learning to play the piano, drawing or enjoying a cozy video game session. I’ve always been driven by curiosity and a deep need to understand how things work - which is probably why I fell for computer science in the first place. I love building things that are useful, clear, and that help people save time, not waste it."}/>
             </Typography>
           </div>
-          <PictureViewer src={meInBuchs} className={"picture"} width={"30%"} alt={intl.formatMessage({id: "about.personalPresentation_portrait_alt", defaultMessage: "Myself in front of the Werdenbergsee and castle, located in Buchs SG, Switzerland"})}/>
+          <PictureViewer src={"/assets/meInBuchs.png"} className={"picture"} width={"30%"} alt={intl.formatMessage({id: "about.personalPresentation_portrait_alt", defaultMessage: "Myself in front of the Werdenbergsee and castle, located in Buchs SG, Switzerland"})}/>
         </div>
         <div className={"divider"}/>
         <div className={"backgroundPresentation"}>
-          <PictureViewer src={diploma} width={"30%"} className={"picture"} alt={intl.formatMessage({id: "about.backgroundPresentation_portrait_alt", defaultMessage: "Myself with my graduation gown and diploma at my graduation ceremony"})}/>
+          <PictureViewer src={"/assets/diplome.png"} width={"30%"} className={"picture"} alt={intl.formatMessage({id: "about.backgroundPresentation_portrait_alt", defaultMessage: "Myself with my graduation gown and diploma at my graduation ceremony"})}/>
           <div className={"text"}>
             <Typography variant={"about"} align={"justify"}>
               <FormattedMessage id={"about.backgroundPresentation_1"} defaultMessage={"I have always liked figuring things out - whether it was puzzles, math problems, or tricky bugs in my code. That curiosity naturally led me to study software engineering at Telecom Nancy - a french engineering school from the Mines-Telecom institute. It is a generalist program that gave me strong fundamentals in everything from algorithms to system architecture, and the flexibility to explore all areas of development and switch from one language to another."}/>
@@ -60,14 +52,14 @@ export const About = () => {
             <FormattedMessage id={"about.resumeIntroduction_2"} defaultMessage={" - I am always happy to connect!"}/>
           </Typography>
           <div className={"buttons"}>
-            <Button href={`../../../public/assets/resume_${locale}.pdf`} size={"large"} target={"_blank"} rel={"noopener noreferrer"}>
+            <Button href={`/assets/resume_${locale}.pdf`} size={"large"} target={"_blank"} rel={"noopener noreferrer"}>
               <FormattedMessage id={"about.openResume"} defaultMessage={"Open in pdf-viewer"}/>
             </Button>
-            <Button href={`../../../public/assets/resume_${locale}.pdf`} size={"large"} target={"_blank"} rel={"noopener noreferrer"} download={true}>
+            <Button href={`/assets/resume_${locale}.pdf`} size={"large"} target={"_blank"} rel={"noopener noreferrer"} download={true}>
               <FormattedMessage id={"about.downloadResume"} defaultMessage={"Download"}/>
             </Button>
           </div>
-          <PictureViewer src={resume} width={"60%"} className={"resume"} alt={intl.formatMessage({id: "about.resume_alt", defaultMessage: "Resume"})}/>
+          <PictureViewer src={`/assets/resume_${locale}.png`} width={"60%"} className={"resume"} alt={intl.formatMessage({id: "about.resume_alt", defaultMessage: "Resume"})}/>
           <div className={"endingSpace"}/>
         </div>
       </div>

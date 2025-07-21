@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const dotenv = require('dotenv');
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 // Récupérer NODE_ENV (development ou production)
 const mode = process.env.NODE_ENV || 'development';
@@ -53,7 +54,10 @@ module.exports={
     /** "static"
      * This property tells Webpack what static file it should serve
      */
-    static: ["./public"],
+    static: {
+      directory: path.resolve(__dirname, 'public'),
+    },
+    compress: true,
     /** "open"
      * opens the browser after server is successfully started
      */
@@ -104,6 +108,17 @@ module.exports={
     new HtmlWebpackPlugin({
       template: './public/index.html',
     }),
-    new webpack.DefinePlugin(envKeys), // injecte les variables d'env
+    new webpack.DefinePlugin(envKeys),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'public'),
+          to: path.resolve(__dirname, 'dist'),
+          globOptions: {
+            ignore: ['**/index.html']
+          },
+        },
+      ],
+    }),
   ],
 }

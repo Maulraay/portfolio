@@ -5,7 +5,6 @@ import { Menu as MenuIcon, DarkMode, DarkModeOutlined, KeyboardArrowDown } from 
 import { useAppContext } from "../App";
 import { FormattedMessage, useIntl } from "react-intl";
 import { withStyles } from "@mui/styles";
-import mainLogo from "../../../public/assets/logo.png";
 
 export const toggleTheme = (theme, setTheme) => {
   const html = document.documentElement;
@@ -101,7 +100,7 @@ export const Header = (props) => {
   return(
     <div className={`header${props.menuState ? " menuOpened" : ""}`}>
       <a className={"logoContainer"} href={'/'}>
-        <img src={mainLogo} alt={intl.formatMessage({id: "layout.header.logo_alt", defaultMessage: "Malaury Keslick stylized logo"})} className={"logo"} loading="lazy"/>
+        <img src={"/assets/logo.png"} alt={intl.formatMessage({id: "layout.header.logo_alt", defaultMessage: "Malaury Keslick stylized logo"})} className={"logo"} loading="lazy"/>
       </a>
       <div className={"buttons"}>
         <Button variant={'outlined'} href={'/'}> <FormattedMessage id={"layout.header.home"} defaultMessage={"Home"}/> </Button>

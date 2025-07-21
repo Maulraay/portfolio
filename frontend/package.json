@@ -5,6 +5,7 @@
     "@mui/icons-material": "^6.1.6",
     "@mui/material": "^6.1.6",
     "@mui/styles": "^6.5.0",
+    "copy-webpack-plugin": "^13.0.0",
     "css-loader": "^7.1.2",
     "file-loader": "^6.2.0",
     "node": "^22.11.0",
@@ -40,7 +41,6 @@
     "webpack-dev-server": "^5.1.0"
   },
   "scripts": {
-    "test": "webpack-dev-server .",
     "dev": "cross-env NODE_ENV=development webpack-dev-server .",
     "build": "cross-env NODE_ENV=production webpack ."
   },

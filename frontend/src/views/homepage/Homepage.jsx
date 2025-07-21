@@ -3,9 +3,6 @@ import './styles.css';
 import { Layout } from "../layout/Layout";
 import { Typography, Button } from "@mui/material";
 import { FormattedMessage, useIntl } from "react-intl";
-import portrait from "../../../public/assets/portrait.png";
-import background from "../../../public/assets/background.png";
-import smallBackground from "../../../public/assets/background_small.png";
 
 export const Homepage = () => {
   const intl = useIntl();
@@ -13,8 +10,8 @@ export const Homepage = () => {
   return(
     <Layout>
       <div className={"backgroundDiv"}>
-        <img src={background} className={"background"} loading="lazy" alt=""/>
-        <img src={smallBackground} className={"smallBackground"} loading="lazy" alt=""/>
+        <img src={"/assets/background.png"} className={"background"} loading="lazy" alt=""/>
+        <img src={"/assets/background_small.png"} className={"smallBackground"} loading="lazy" alt=""/>
         <div className={"homepage"}>
           <div className={"presentation"}>
             <Typography variant={"h1"} className={"title"}>
@@ -35,7 +32,7 @@ export const Homepage = () => {
               </Button>
             </div>
           </div>
-          <img className={"portrait"} src={portrait} alt={intl.formatMessage({id: "homepage.picture", defaultMessage: "Main portrait"})} loading="lazy"/>
+          <img className={"portrait"} src={"/assets/portrait.png"} alt={intl.formatMessage({id: "homepage.picture", defaultMessage: "Main portrait"})} loading="lazy"/>
         </div>
       </div>
     </Layout>

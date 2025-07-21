@@ -3,8 +3,6 @@ import './styles.css';
 import { IconButton, Typography } from "@mui/material";
 import { Copyright, LocalPhone } from "@mui/icons-material";
 import { FormattedMessage, useIntl } from "react-intl";
-import linkedin from "../../../public/assets/linkedin.png";
-import github from "../../../public/assets/github.png";
 
 export const Footer = (props) => {
   const intl = useIntl();
@@ -18,10 +16,10 @@ export const Footer = (props) => {
         </Typography>
         <div className={"socialNetworks"}>
           <IconButton href={"https://www.linkedin.com/in/malaurykeslick/"} target={"_blank"} rel={"noopener noreferrer"}>
-            <img src={linkedin} height={"20px"} alt={intl.formatMessage({id: "layout.footer.linkedin_alt", defaultMessage: "LinkedIn logo"})} loading="lazy"/>
+            <img src={"/assets/linkedin.png"} height={"20px"} alt={intl.formatMessage({id: "layout.footer.linkedin_alt", defaultMessage: "LinkedIn logo"})} loading="lazy"/>
           </IconButton>
           <IconButton href={"https://github.com/Maulraay"} target={"_blank"} rel={"noopener noreferrer"}>
-            <img src={github} height={"20px"} alt={intl.formatMessage({id: "layout.footer.github_alt", defaultMessage: "GitHub logo"})} loading="lazy"/>
+            <img src={"/assets/github.png"} height={"20px"} alt={intl.formatMessage({id: "layout.footer.github_alt", defaultMessage: "GitHub logo"})} loading="lazy"/>
           </IconButton>
         </div>
       </div>
