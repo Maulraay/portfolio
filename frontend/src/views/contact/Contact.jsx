@@ -60,6 +60,7 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.info("Trying to send mail...")
     try {
       const res = await fetch(`${process.env.REACT_APP_API_URL}/sendMail`, {
         method: 'POST',
@@ -77,10 +78,13 @@ const Contact = () => {
           subject: '',
           message: '',
         });
+        console.info("Message successfully sent!");
       } else {
+        console.error('Error : ' + data.error)
         setStatus('Error : ' + data.error);
       }
     } catch (err) {
+      console.error('Error : ' + err)
       setStatus('Error on server connection');
     }
   };
