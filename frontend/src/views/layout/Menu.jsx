@@ -1,15 +1,22 @@
-import React, {useState} from "react";
-import {Button, IconButton, Typography} from "@mui/material";
-import {Cancel, Clear, Copyright, DarkMode, DarkModeOutlined} from "@mui/icons-material";
-import { FormattedMessage } from "react-intl";
+import React, { useEffect, useState } from "react";
+import './styles.css';
+import { Button, IconButton, Typography } from "@mui/material";
+import { Cancel, Copyright, DarkMode, DarkModeOutlined } from "@mui/icons-material";
+import { FormattedMessage, useIntl } from "react-intl";
+import { useAppContext } from "../App";
+import { toggleTheme } from "./Header";
 import linkedin from "../../../public/assets/linkedin.png";
 import github from "../../../public/assets/github.png";
-import {useAppContext} from "../App";
-import {toggleTheme} from "./Header";
 
 export const Menu = (props) => {
-  const { theme, locale, selectLanguage } = useAppContext();
+  const intl = useIntl();
+
+  const { theme, setMyTheme,locale, selectLanguage } = useAppContext();
   const [currentTheme, setCurrentTheme] = useState(theme);
+
+  useEffect(() => {
+    setMyTheme(currentTheme);
+  }, [currentTheme]);
 
   let languageList = ["English", "French", "Deutsch"];
   const fullLocale = languageList.find((lang) => lang.slice(0, 2).toLowerCase() === locale);
@@ -21,7 +28,7 @@ export const Menu = (props) => {
   return (
     <div className={'menu'}>
       <div className={'topIcons'}>
-        <IconButton className={"darkModeIcon"} onClick={() => toggleTheme(currentTheme, setCurrentTheme)} alt={<FormattedMessage id={"layout.header.darkMode_alt"} defaultMessage={"Dark Mode toggle"}/>}>
+        <IconButton className={"darkModeIcon"} onClick={() => toggleTheme(currentTheme, setCurrentTheme)} alt={intl.formatMessage({id: "layout.header.darkMode_alt", defaultMessage: "Dark Mode toggle"})}>
           { currentTheme === 'dark' ? <DarkMode fontSize={"large"}/> : <DarkModeOutlined fontSize={"large"}/> }
         </IconButton>
         <IconButton className={"closeMenuIcon"} onClick={() => props.closeMenu()}>
@@ -47,16 +54,16 @@ export const Menu = (props) => {
         ))}
       </div>
       <div className={`copyright`}>
-        <Copyright className={'copyrightLogo'} alt={<FormattedMessage id={"layout.footer.copyright_alt"} defaultMessage={"Copyright logo"}/>}/>
+        <Copyright className={'copyrightLogo'} alt={intl.formatMessage({id: "layout.footer.copyright_alt", defaultMessage: "Copyright logo"})}/>
         <Typography variant={"overline"} className={"copyrightText"}>
           {new Date().getFullYear()} - Maulray
         </Typography>
         <div className={"socialNetworks"}>
           <IconButton href={"https://www.linkedin.com/in/malaurykeslick/"} target={"_blank"} rel={"noopener noreferrer"}>
-            <img src={linkedin} height={"20px"} alt={"LinkedIn redirection"} loading="lazy"/>
+            <img src={linkedin} height={"20px"} alt={intl.formatMessage({id: "layout.footer.linkedin_alt", defaultMessage: "LinkedIn logo"})} loading="lazy"/>
           </IconButton>
           <IconButton href={"https://github.com/Maulraay"} target={"_blank"} rel={"noopener noreferrer"}>
-            <img src={github} height={"20px"} alt={"GitHub redirection"} loading="lazy"/>
+            <img src={github} height={"20px"} alt={intl.formatMessage({id: "layout.footer.github_alt", defaultMessage: "GitHub logo"})} loading="lazy"/>
           </IconButton>
         </div>
       </div>

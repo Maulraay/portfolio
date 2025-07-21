@@ -1,28 +1,3 @@
-@media only screen and (max-width: 1024px) {
-    .contact .mailPanel {
-        width: 50%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        align-items: center;
-        gap: 5%;
-    }
-
-    .contact .contactForm {
-        width: 150%;
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .contact .contactForm .sendButton{
-        width: 100%;
-    }
-}
-
 @media only screen and (min-width: 750px) {
     .contact .mailPanel {
         width: 80%;
@@ -48,12 +23,36 @@
     }
 }
 
+@media only screen and (max-width: 1024px) {
+    .contact .mailPanel {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        gap: 5%;
+    }
+
+    .contact .contactForm {
+        width: 150%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .contact .contactForm .sendButton{
+        width: 100%;
+    }
+}
+
 @media only screen and (max-width: 1200px) {
     .leftOrnament, .rightOrnament{
         display: none;
     }
 }
-
 
 .contact {
     width: 100%;

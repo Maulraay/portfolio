@@ -8,7 +8,7 @@
     }
 }
 
-@media only screen and (min-height: 559px){
+@media only screen and (min-height: 560px){
     .homepage {
         justify-content: space-between;
     }
@@ -24,7 +24,7 @@
     }
 }
 
-@media only screen and (min-height: 560px) and (max-width: 830px){
+@media only screen and (min-height: 560px) and (max-width: 829px){
     .homepage .presentation{
         flex: 1;
         order: 2;

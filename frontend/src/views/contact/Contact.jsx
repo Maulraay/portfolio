@@ -1,12 +1,12 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import './styles.css';
 import { Layout } from "../layout/Layout";
 import { Typography, TextField, Box, Button, useTheme } from "@mui/material";
 import { makeStyles } from "@mui/styles";
+import { FormattedMessage } from "react-intl";
 import { useAppContext } from "../App";
 import leftOrnament from "../../../public/assets/left_ornament_contact.png";
 import rightOrnament from "../../../public/assets/right_ornament_contact.png";
-import { FormattedMessage } from "react-intl";
 
 export const Contact = () => {
   const appTheme = useTheme();

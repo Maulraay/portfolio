@@ -7,6 +7,8 @@
   "layout.header.darkMode_alt": "Bascule du mode sombre",
 
   "layout.footer.copyright_alt": "Logo copyright",
+  "layout.footer.github_alt": "Logo GitHub",
+  "layout.footer.linkedin_alt": "Logo LinkedIn",
   "layout.footer.phone_alt": "Logo téléphone",
   "layout.footer.learnMore": "Vous voulez en savoir plus ?",
   "layout.footer.contact": "Programmons un appel!",
