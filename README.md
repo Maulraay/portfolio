@@ -86,7 +86,7 @@ npm run dev
 | Commande        | Description                                                                    |
 |-----------------|--------------------------------------------------------------------------------|
 | `npm run dev`   | Launch frontend/ on port 9500 and backend/ on port 5000                        |
-| `npm run build` | Compile app in `/dist`                                                         |
+| `npm run build` | Compile app frontend in `frontend/dist`                                        |
 | `netlify serve` | **If configured**<br/>Build the app with Netlify config (online env variables) |
 
 ---
