@@ -1,10 +1,10 @@
 import React, { lazy, useEffect, useState } from "react";
 import '../theme/fonts.css';
-const Homepage = lazy(() => import('./homepage/Homepage'));
-const About = lazy(() => import('./about/About'));
-const Gallery = lazy(() => import('./gallery/Gallery'));
-const Contact = lazy(() => import('./contact/Contact'));
-const Error = lazy(() => import('./error/Error'));
+import Homepage from './homepage/Homepage';
+import About from './about/About';
+import Gallery from './gallery/Gallery';
+import Contact from './contact/Contact';
+import Error from './error/Error';
 import { createTheme, ThemeProvider, useMediaQuery } from '@mui/material';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { IntlProvider } from 'react-intl';
