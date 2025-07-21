@@ -4,14 +4,14 @@ import { Layout } from "../layout/Layout";
 import { Typography, Button } from "@mui/material";
 import { FormattedMessage, useIntl } from "react-intl";
 
-export const Homepage = () => {
+const Homepage = () => {
   const intl = useIntl();
 
   return(
     <Layout>
       <div className={"backgroundDiv"}>
-        <img src={"/assets/background.png"} className={"background"} loading="lazy" alt=""/>
-        <img src={"/assets/background_small.png"} className={"smallBackground"} loading="lazy" alt=""/>
+        <img src={"/assets/background.webp"} className={"background"} loading="lazy" alt=""/>
+        <img src={"/assets/background_small.webp"} className={"smallBackground"} loading="lazy" alt=""/>
         <div className={"homepage"}>
           <div className={"presentation"}>
             <Typography variant={"h1"} className={"title"}>
@@ -32,9 +32,11 @@ export const Homepage = () => {
               </Button>
             </div>
           </div>
-          <img className={"portrait"} src={"/assets/portrait.png"} alt={intl.formatMessage({id: "homepage.picture", defaultMessage: "Main portrait"})} loading="lazy"/>
+          <img className={"portrait"} src={"/assets/portrait.webp"} alt={intl.formatMessage({id: "homepage.picture", defaultMessage: "Main portrait"})} loading="lazy"/>
         </div>
       </div>
     </Layout>
   )
-}
+};
+
+export default Homepage;

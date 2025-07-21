@@ -4,7 +4,7 @@ import {Layout} from "../layout/Layout";
 import { Typography } from "@mui/material";
 import { WarningTwoTone, TrendingFlatTwoTone } from "@mui/icons-material";
 
-export const Error = () => {
+const Error = () => {
   return (
     <Layout>
       <div className={'body'}>
@@ -37,3 +37,5 @@ export const Error = () => {
     </Layout>
   )
 }
+
+export default Error;

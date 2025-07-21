@@ -26,19 +26,28 @@ module.exports={
    * to use its built-in optimizations accordingly. default is production
    */
   mode,
+  optimization: {
+    minimize: true,
+    splitChunks: {
+      chunks: 'all',
+      cacheGroups: {
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+      },
+    },
+  },
   /** "entry"
    * the entry point
    */
   entry: "./src/index.js",
   output: {
-    /** "path"
-     * the folder path of the output file
-     */
-    path: path.resolve(__dirname, "dist"),
-    /** "filename"
-     * the name of the output file
-     */
-    filename: "main.js"
+    filename: '[name].[contenthash].js',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
+    clean: true,
   },
   devtool: mode === 'development' ? 'eval-source-map' : 'source-map',
   /** "target"

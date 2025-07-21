@@ -6,7 +6,7 @@ import { makeStyles } from "@mui/styles";
 import { FormattedMessage } from "react-intl";
 import { useAppContext } from "../App";
 
-export const Contact = () => {
+const Contact = () => {
   const appTheme = useTheme();
   const {theme} = useAppContext();
   const useInputStyles = makeStyles({
@@ -88,7 +88,7 @@ export const Contact = () => {
   return (
     <Layout>
       <div className={"contact"}>
-        <img src={"/assets/left_ornament_contact.png"} className={"leftOrnament"} alt={""} loading="lazy"/>
+        <img src={"/assets/left_ornament_contact.webp"} className={"leftOrnament"} alt={""} loading="lazy"/>
         <Typography variant={"h2"} className={"title"}>
           <FormattedMessage id={"contact.title"} defaultMessage={"Let's get in touch!"}/>
         </Typography>
@@ -174,8 +174,10 @@ export const Contact = () => {
             </Box>
           )}
         </div>
-        <img src={"/assets/right_ornament_contact.png"} className={"rightOrnament"} alt={""} loading="lazy"/>
+        <img src={"/assets/right_ornament_contact.webp"} className={"rightOrnament"} alt={""} loading="lazy"/>
       </div>
     </Layout>
   )
-}
+};
+
+export default Contact;
