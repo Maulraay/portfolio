@@ -1,6 +1,6 @@
-@import '../../colorPalette/variables.css';
-@import '../../colorPalette/light.css';
-@import '../../colorPalette/dark.css';
+@import '../../theme/variables.css';
+@import '../../theme/light.css';
+@import '../../theme/dark.css';
 
 @media only screen and (max-height: 559px){
     .layout .menu .buttons{

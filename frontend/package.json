@@ -34,6 +34,7 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-jest": "^28.9.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
     "html-webpack-plugin": "^5.6.3",
     "path": "^0.12.7",
     "webpack": "^5.96.1",

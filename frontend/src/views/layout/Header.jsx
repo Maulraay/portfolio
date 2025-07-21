@@ -19,7 +19,8 @@ export const Header = (props) => {
   const appTheme = useTheme();
   const { theme, setMyTheme, locale, selectLanguage } = useAppContext();
 
-  const prefersDarkMode = typeof window !== 'undefined' ? useMediaQuery('(prefers-color-scheme: dark)') : false;
+  let prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+  prefersDarkMode = typeof window !== 'undefined' ? prefersDarkMode : false;
   const [currentTheme, setCurrentTheme] = useState(prefersDarkMode ? 'dark' : 'light');
 
   useEffect(() => {

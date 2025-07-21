@@ -1,4 +1,5 @@
 import React, { lazy, useEffect, useState } from "react";
+import '../theme/fonts.css';
 const Homepage = lazy(() => import('./homepage/Homepage'));
 const About = lazy(() => import('./about/About'));
 const Gallery = lazy(() => import('./gallery/Gallery'));
@@ -212,7 +213,8 @@ const router = createBrowserRouter([
 ]);
 
 const App = () =>{
-  const darkMode = localStorage.getItem('darkMode') ? localStorage.getItem('darkMode') === "true" : useMediaQuery('(prefers-color-scheme: dark)');
+  const preferredColorTheme = useMediaQuery('(prefers-color-scheme: dark)');
+  const darkMode = localStorage.getItem('darkMode') ? localStorage.getItem('darkMode') === "true" : preferredColorTheme;
   const [theme,setMyTheme] = useState(darkMode ? "dark" : "light");
 
   useEffect(() => {
