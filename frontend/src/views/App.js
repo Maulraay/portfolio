@@ -1,10 +1,10 @@
-import React, { lazy, useEffect, useState } from "react";
-import '../theme/fonts.css';
+import React, { Suspense, useEffect, useState } from "react";
 import Homepage from './homepage/Homepage';
 import About from './about/About';
 import Gallery from './gallery/Gallery';
 import Contact from './contact/Contact';
 import Error from './error/Error';
+import Loading from './loading/Loading';
 import { createTheme, ThemeProvider, useMediaQuery } from '@mui/material';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { IntlProvider } from 'react-intl';
@@ -219,6 +219,11 @@ const App = () =>{
 
   useEffect(() => {
     appTheme.colorSchemes.darkMode = theme === "dark";
+    appTheme.palette.mode = theme;
+    if (!document.documentElement.classList.contains(theme)) {
+      document.documentElement.classList.toggle(theme);
+      document.documentElement.classList.toggle(theme === "dark" ? "light" : "dark");
+    }
   }, [theme]);
 
   const [locale, setLocale] = useState('en');
@@ -261,9 +266,11 @@ const App = () =>{
   return (
     <Context.Provider value={{theme, setMyTheme, locale, selectLanguage}}>
       <ThemeProvider theme={appTheme}>
-        <IntlProvider locale={locale} messages={messages}>
-          <RouterProvider router={router}/>
-        </IntlProvider>
+        <Suspense fallback={<Loading />}>
+          <IntlProvider locale={locale} messages={messages}>
+            <RouterProvider router={router}/>
+          </IntlProvider>
+        </Suspense>
       </ThemeProvider>
     </Context.Provider>
   )
