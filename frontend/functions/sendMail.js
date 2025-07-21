@@ -2,7 +2,7 @@ const nodemailer = require('nodemailer');
 
 exports.handler = async function(event, context) {
   const { name, email, subject, message } = JSON.parse(event.body || '{}');
-  console.info("Received a request from " + name + " to send an email.");
+  console.log("Received a request from " + name + " to send an email.");
 
   if (!name || !email || !message) {
     return {
@@ -27,13 +27,13 @@ exports.handler = async function(event, context) {
       text: `[Sent by ${name}/${email}]\n${message}`
     });
 
-    console.info("Message sent!");
+    console.log("Message sent!");
     return {
       statusCode: 200,
       body: JSON.stringify({ success: true })
     };
   } catch (error) {
-    console.error("An error occurred : " + error.message);
+    console.log("[ERROR] An error occurred : " + error.message);
     return {
       statusCode: 500,
       body: JSON.stringify({ error: error.message })
