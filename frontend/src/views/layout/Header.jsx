@@ -21,7 +21,7 @@ export const Header = (props) => {
 
   let prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
   prefersDarkMode = typeof window !== 'undefined' ? prefersDarkMode : false;
-  const [currentTheme, setCurrentTheme] = useState(prefersDarkMode ? 'dark' : 'light');
+  const [currentTheme, setCurrentTheme] = useState(theme);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;

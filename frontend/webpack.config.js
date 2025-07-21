@@ -112,13 +112,6 @@ module.exports={
       { test: /\.css$/,
         use: ['style-loader', 'css-loader']
       },
-      {
-        test: /\.(woff2?|ttf|otf|eot)$/,
-        type: 'asset/resource',
-        generator: {
-          filename: 'fonts/[name][ext]', // output dans /dist/fonts
-        },
-      }
     ]
   },
   plugins: [

@@ -1,4 +1,4 @@
-:root {
+:root, .light {
     --color-bg: #E8ECE4;
     --color-primary: #3e4e50;
     --color-secondary: #9ec1a3;
@@ -6,6 +6,18 @@
     --color-text-primary: #F2F0F2;
     --color-text-secondary: #3e4e50;
     --color-link: #3e4e50;
+    --color-link-primary: #cfe0c3;
+    --color-link-secondary: #cfe0c3;
+}
+
+.dark {
+    --color-bg: #3e4e50;
+    --color-primary: #073036;
+    --color-secondary: #9ec1a3;
+    --color-text: #F2F0F2;
+    --color-text-primary: #F2F0F2;
+    --color-text-secondary: #073036;
+    --color-link: #cfe0c3;
     --color-link-primary: #cfe0c3;
     --color-link-secondary: #cfe0c3;
 }
