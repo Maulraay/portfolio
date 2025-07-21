@@ -9,8 +9,7 @@ const mode = process.env.NODE_ENV || 'development';
 
 // Charger le bon .env.* automatiquement
 const envPath = mode === "development" ? '.env' : `.env.production`;
-let env = dotenv.config({ path: path.resolve(__dirname, envPath) }).parsed || { REACT_APP_API_URL: "/.netlify/functions" };
-env = Object.keys(env).length ? { REACT_APP_API_URL: "/.netlify/functions" } : env;
+const env = dotenv.config({ path: path.resolve(__dirname, envPath) }).parsed || {};
 
 // Convertir pour DefinePlugin
 const envKeys = Object.keys(env).reduce((acc, key) => {
