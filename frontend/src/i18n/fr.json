@@ -51,5 +51,14 @@
   "contact.thankYou_2": "Je vous recontacte dès que possible.",
   "contact.back": "Retour",
 
-  "error": ""
+  "error.img_alt": "Illustration 'OOPS'",
+  "error.title": "Quelque chose s'est mal passé...",
+  "error.content_1": "Il semble que cette page ne réponde pas pour le moment. Cela peut être dû à un trafic important ou à un problème temporaire de mon côté.",
+  "error.content_2": "Voici quelques actions que vous pouvez essayer :",
+  "error.content_3": "• Rechargez la page après quelques instants.",
+  "error.content_4": "• Vérifiez votre connexion internet.",
+  "error.content_5_1": "• Si le problème persiste, vous pouvez ",
+  "error.content_5_2": "ouvrir un ticket",
+  "error.content_5_3": " ou me contacter à ",
+  "error.content_6": "Je m'excuse pour la gêne occasionnée et vous remercie pour votre patience !"
 }

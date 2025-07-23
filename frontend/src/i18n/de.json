@@ -51,5 +51,14 @@
   "contact.thankYou_2": "Ich melde mich in Kürze bei Ihnen.",
   "contact.back": "Zurück",
 
-  "error": ""
+  "error.img_alt": "'OOPS'-Illustration",
+  "error.title": "Etwas ist schiefgelaufen...",
+  "error.content_1": "Es sieht so aus, als würde diese Seite momentan nicht reagieren. Das könnte an hohem Traffic oder einem vorübergehenden Problem auf meiner Seite liegen.",
+  "error.content_2": "Hier sind ein paar Dinge, die du versuchen kannst:",
+  "error.content_3": "• Lade die Seite nach ein paar Momenten neu.",
+  "error.content_4": "• Überprüfe deine Internetverbindung.",
+  "error.content_5_1": "• Wenn das Problem weiterhin besteht, bitte ",
+  "error.content_5_2": "eröffne ein Issue",
+  "error.content_5_3": " oder kontaktiere mich unter ",
+  "error.content_6": "Ich entschuldige mich für die Unannehmlichkeiten und danke dir für deine Geduld!"
 }
