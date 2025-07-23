@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import './styles.css';
 import { Layout } from "../layout/Layout";
 import { Typography, TextField, Box, Button, useTheme } from "@mui/material";
 import { makeStyles } from "@mui/styles";
@@ -92,7 +91,7 @@ const Contact = () => {
   return (
     <Layout>
       <div className={"contact"}>
-        <img src={"/assets/left_ornament_contact.webp"} className={"leftOrnament"} alt={""} loading="lazy"/>
+        <img src={"/assets/left_ornament_contact.webp"} className={"leftOrnament"} alt={""}/>
         <Typography variant={"h2"} className={"title"}>
           <FormattedMessage id={"contact.title"} defaultMessage={"Let's get in touch!"}/>
         </Typography>
@@ -178,7 +177,7 @@ const Contact = () => {
             </Box>
           )}
         </div>
-        <img src={"/assets/right_ornament_contact.webp"} className={"rightOrnament"} alt={""} loading="lazy"/>
+        <img src={"/assets/right_ornament_contact.webp"} className={"rightOrnament"} alt={""}/>
       </div>
     </Layout>
   )

@@ -1,5 +1,4 @@
 import React from "react";
-import './styles.css';
 import {Layout} from "../layout/Layout";
 import { Typography } from "@mui/material";
 import { WarningTwoTone, TrendingFlatTwoTone } from "@mui/icons-material";

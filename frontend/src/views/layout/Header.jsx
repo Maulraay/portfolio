@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import './styles.css';
 import { Button, IconButton, Menu, MenuItem, useMediaQuery, useTheme } from "@mui/material";
 import { Menu as MenuIcon, DarkMode, DarkModeOutlined, KeyboardArrowDown } from "@mui/icons-material";
 import { useAppContext } from "../App";
@@ -101,7 +100,7 @@ export const Header = (props) => {
   return(
     <div className={`header${props.menuState ? " menuOpened" : ""}`}>
       <a className={"logoContainer"} href={'/'}>
-        <img src={"/assets/logo.png"} alt={intl.formatMessage({id: "layout.header.logo_alt", defaultMessage: "Malaury Keslick stylized logo"})} className={"logo"} loading="lazy"/>
+        <img src={"/assets/logo.png"} alt={intl.formatMessage({id: "layout.header.logo_alt", defaultMessage: "Malaury Keslick stylized logo"})} className={"logo"}/>
       </a>
       <div className={"buttons"}>
         <Button variant={'outlined'} href={'/'}> <FormattedMessage id={"layout.header.home"} defaultMessage={"Home"}/> </Button>

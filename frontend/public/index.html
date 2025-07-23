@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <script>
+    <script> {/*prevents white flash on page change, especially when dark mode is activated*/}
       const theme = localStorage.getItem('darkMode') === null ?
         (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') :
         localStorage.getItem('darkMode') === "true" ? "dark" : "light";
@@ -11,6 +11,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Malaury Keslick</title>
+        <style> {/*prevents raw style flashing before the custom CSS is loaded*/}
+            img {
+                display: none;
+            }
+        </style>
         <link rel="icon" sizes="16px 32px 48px 96px 144px 192px" href="/assets/favicon.png" type="image/png">
         <link rel="preload" href="/fonts/mina-v13-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
         <link rel="preload" href="/fonts/vina-sans-v7-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />

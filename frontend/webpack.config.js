@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 // Récupérer NODE_ENV (development ou production)
 const mode = process.env.NODE_ENV || 'development';
@@ -109,7 +110,10 @@ module.exports={
         loader: 'file-loader',
       },
       { test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: [
+          mode === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader,
+          'css-loader'
+        ]
       },
       {
         test: /\.(woff2?|ttf|otf|eot)$/,
@@ -136,5 +140,8 @@ module.exports={
         },
       ],
     }),
+    ...(mode === 'production'
+      ? [new MiniCssExtractPlugin({ filename: '[name].[contenthash].css' })]
+      : []),
   ],
 }

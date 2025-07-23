@@ -1,10 +1,9 @@
-import React, { Suspense, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Homepage from './homepage/Homepage';
 import About from './about/About';
 import Gallery from './gallery/Gallery';
 import Contact from './contact/Contact';
 import Error from './error/Error';
-import Loading from './loading/Loading';
 import { createTheme, ThemeProvider, useMediaQuery } from '@mui/material';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { IntlProvider } from 'react-intl';
@@ -266,11 +265,9 @@ const App = () =>{
   return (
     <Context.Provider value={{theme, setMyTheme, locale, selectLanguage}}>
       <ThemeProvider theme={appTheme}>
-        <Suspense fallback={<Loading />}>
-          <IntlProvider locale={locale} messages={messages}>
-            <RouterProvider router={router}/>
-          </IntlProvider>
-        </Suspense>
+        <IntlProvider locale={locale} messages={messages}>
+          <RouterProvider router={router}/>
+        </IntlProvider>
       </ThemeProvider>
     </Context.Provider>
   )

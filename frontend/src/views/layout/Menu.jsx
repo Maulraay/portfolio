@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import './styles.css';
 import { Button, IconButton, Typography } from "@mui/material";
 import { Cancel, Copyright, DarkMode, DarkModeOutlined } from "@mui/icons-material";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -58,10 +57,10 @@ export const Menu = (props) => {
         </Typography>
         <div className={"socialNetworks"}>
           <IconButton href={"https://www.linkedin.com/in/malaurykeslick/"} target={"_blank"} rel={"noopener noreferrer"}>
-            <img src={"/assets/linkedin.png"} height={"20px"} alt={intl.formatMessage({id: "layout.footer.linkedin_alt", defaultMessage: "LinkedIn logo"})} loading="lazy"/>
+            <img src={"/assets/linkedin.png"} height={"20px"} alt={intl.formatMessage({id: "layout.footer.linkedin_alt", defaultMessage: "LinkedIn logo"})}/>
           </IconButton>
           <IconButton href={"https://github.com/Maulraay"} target={"_blank"} rel={"noopener noreferrer"}>
-            <img src={"/assets/github.png"} height={"20px"} alt={intl.formatMessage({id: "layout.footer.github_alt", defaultMessage: "GitHub logo"})} loading="lazy"/>
+            <img src={"/assets/github.png"} height={"20px"} alt={intl.formatMessage({id: "layout.footer.github_alt", defaultMessage: "GitHub logo"})}/>
           </IconButton>
         </div>
       </div>

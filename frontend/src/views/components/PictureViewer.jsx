@@ -8,7 +8,6 @@ export default function PictureViewer({ src, alt = '', className, width }) {
   return (
     <>
       <img
-        loading="lazy"
         src={src}
         alt={alt}
         className={className}

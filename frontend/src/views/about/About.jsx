@@ -1,5 +1,4 @@
 import React from "react";
-import './styles.css';
 import { Layout } from "../layout/Layout";
 import { Button, Typography } from "@mui/material";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -15,11 +14,11 @@ const About = () => {
     <Layout>
       <div className={"about"}>
         <div className={"titleAndOrnaments"}>
-          <img src={"/assets/left_ornament_about.webp"} alt="" className={"ornament"} loading="lazy"/>
+          <img src={"/assets/left_ornament_about.webp"} alt="" className={"ornament"}/>
           <Typography variant={"h2"} className={"title"}>
             <FormattedMessage id={"about.title"} defaultMessage={"A little bit more about me"}/>
           </Typography>
-          <img src={"/assets/right_ornament_about.webp"} alt="" className={"ornament"} loading="lazy"/>
+          <img src={"/assets/right_ornament_about.webp"} alt="" className={"ornament"}/>
         </div>
         <div className={"globalPresentation"}>
           <div className={"text"}>

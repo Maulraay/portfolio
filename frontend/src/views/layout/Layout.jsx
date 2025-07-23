@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import './styles.css';
 import { Header } from "./Header";
 import { Menu } from "./Menu";
 import { Footer } from "./Footer";
