@@ -24,7 +24,7 @@ exports.handler = async function(event) {
       from: email,
       to: process.env.EMAIL_USER,
       subject: `[PORTFOLIO] ${subject}`,
-      text: `[Sent by ${name}@${email}]\n${message}`
+      text: `[Sent by ${name} / ${email}]\n${message}`
     });
 
     console.log(`Mail successfully sent!`);
