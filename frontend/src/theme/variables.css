@@ -1,5 +1,6 @@
 :root, .light {
     --color-bg: #E8ECE4;
+    --color-bg-semi-opaque: rgba(232,236,228,0.4);
     --color-primary: #3e4e50;
     --color-secondary: #9ec1a3;
     --color-text: #343333;
@@ -12,6 +13,7 @@
 
 .dark {
     --color-bg: #3e4e50;
+    --color-bg-semi-opaque: rgba(62,78,80,0.4);
     --color-primary: #073036;
     --color-secondary: #9ec1a3;
     --color-text: #F2F0F2;

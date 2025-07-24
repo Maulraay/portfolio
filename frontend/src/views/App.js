@@ -4,6 +4,8 @@ import About from './about/About';
 import Gallery from './gallery/Gallery';
 import Contact from './contact/Contact';
 import Error from './error/Error';
+import PrivacyPolicy from './legal/PrivacyPolicy';
+import LegalNotices from './legal/LegalNotices';
 import { createTheme, ThemeProvider, useMediaQuery } from '@mui/material';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { IntlProvider } from 'react-intl';
@@ -207,6 +209,16 @@ const router = createBrowserRouter([
   {
     path: 'contact',
     element: <Contact/>,
+    errorElement: <Error/>
+  },
+  {
+    path: 'privacy',
+    element: <PrivacyPolicy/>,
+    errorElement: <Error/>
+  },
+  {
+    path: 'legal',
+    element: <LegalNotices/>,
     errorElement: <Error/>
   }
 ]);
