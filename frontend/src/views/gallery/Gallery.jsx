@@ -4,167 +4,86 @@ import {Box, Card, CardContent, CardMedia, Chip, IconButton, Typography} from "@
 import { FormattedMessage, useIntl } from "react-intl";
 import {ChevronLeft, ChevronRight} from "@mui/icons-material";
 
-const projects = [
-  {
-    key: "Project_1",
-    title: "Project 1",
-    description: "Project 1 descr",
-    stack: ["tech1", "tech2", "tech3", "tech4"]
-  },
-  {
-    key: "Project_2",
-    title: "Project 2",
-    description: "Project 2 descr",
-    stack: ["tech1", "tech2", "tech3", "tech4"]
-  },
-  {
-    key: "Project_3",
-    title: "Project 3",
-    description: "Project 3 descr",
-    stack: ["tech1", "tech2", "tech3", "tech4"]
-  }
-];
-
-const ProjectCard = (project) => {
+const ProjectCard = (props) => {
+  const {project, key} = props;
   return (
-    <Card>
-      <div className={"cardHeader"}>
-        <Typography variant={"about"} align={"justify"}>
-          {project.title}
-        </Typography>
-      </div>
+    <Card key={key}>
+      <CardMedia
+        component="img"
+        alt={project.imgAlt}
+        sx={{ width: "20%", objectFit: "contain" }}
+        image={`/assets/${project.img}.webp`}
+      />
       <CardContent>
-        {project.description}
+        <Typography variant={"about"} align={"justify"}>
+          {project.title} <br/>
+          <Typography sx={{ fontStyle: 'italic' }}>
+            {project.date}
+          </Typography>
+        </Typography>
+        <Typography className={"projectDescr"}>
+          {project.description}
+        </Typography>
+        <div className={"stack"}>
+          {project.stack && project.stack.map((item, index) => {
+            const className = item.split(" ")[0];
+            return (<Chip key={`tech${index}`} label={item} className={className} />)
+          })}
+        </div>
       </CardContent>
-      <div className={"stack"}>
-        {project.stack.map((item, index) => {
-          return (<Chip key={`tech${index}`} label={item}/>)
-        })}
-      </div>
     </Card>
   )
 }
 
-const ProjectCarousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(1);
-  const [visibleProjects, setVisibleProjects] = useState(projects.slice(
-    Math.max(currentIndex - 1, 0),
-    Math.min(currentIndex + 2, projects.length)
-  ));
-
-  const total = projects.length;
-  const mod = (n, m) => ((n % m) + m) % m;
-
-  const getRelativeIndex = (index) => {
-    if (index === mod(currentIndex - 1, total)) return "left";
-    if (index === currentIndex) return "center";
-    if (index === mod(currentIndex + 1, total)) return "right";
-    return "hidden";
-  };
-
-  const next = () => setCurrentIndex((i) => mod(i + 1, total));
-  const prev = () => setCurrentIndex((i) => mod(i - 1, total));
-
-  const getStyles = (position) => {
-    const base = {
-      position: "absolute",
-      transition: "all 0.5s ease",
-      height: "85%",
-      width: "30%",
-      opacity: 0,
-      transform: "translateX(0) scale(0.8)",
-      zIndex: 1,
-    };
-
-    switch (position) {
-      case "left":
-        return {
-          ...base,
-          opacity: 0.6,
-          transform: "translateX(-100%) scale(0.8)",
-        };
-      case "center":
-        return {
-          ...base,
-          opacity: 1,
-          transform: "translateX(0) scale(1)",
-          zIndex: 3,
-        };
-      case "right":
-        return {
-          ...base,
-          opacity: 0.6,
-          transform: "translateX(100%) scale(0.8)",
-        };
-      default:
-        return {
-          ...base,
-          left: "100%",
-          opacity: 0,
-          pointerEvents: "none",
-        };
-    }
-  };
-
-  return (
-    <Box
-      display="flex"
-      alignItems="center"
-      justifyContent="center"
-      position="relative"
-      width="100%"
-      height="100%"
-      overflow="hidden"
-    >
-      <IconButton
-        onClick={prev}
-        sx={{ zIndex: 3 }}
-      >
-        <ChevronLeft fontSize="large" />
-      </IconButton>
-
-      <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        sx={{ width: "80%", height: "100%", position: "relative"}}
-      >
-        {visibleProjects.map((project, index) => {
-          const pos = getRelativeIndex(index);
-          const style = getStyles(pos);
-
-          return (
-            <Box key={project.id} sx={style}>
-              <ProjectCard {...project} />
-            </Box>
-          );
-        })}
-      </Box>
-
-      <IconButton
-        onClick={next}
-        sx={{ zIndex: 3 }}
-      >
-        <ChevronRight fontSize="large" />
-      </IconButton>
-    </Box>
-  );
-}
-
 const Gallery = () => {
+  const intl = useIntl();
+
+  const projects = [
+    {
+      key: "Project_1",
+      img: "researcher",
+      imgAlt: intl.formatMessage({id: "projects.1.img_alt", defaultMessage: "Teacher-researcher illustration"}),
+      title: intl.formatMessage({id: "projects.1.title", defaultMessage: "Teacher-researcher website development"}),
+      date: intl.formatMessage({id: "projects.1.date", defaultMessage: "2025 - Currently in designing phase"}),
+      description: intl.formatMessage({id: "projects.1.descr", defaultMessage: "Descr todo"}),
+      stack: ["Figma", "Javascript", "HTML", "CSS", "Webpack", "Google Drive API", "Netlify"]
+    },
+    {
+      key: "Project_2",
+      img: "portfolio",
+      imgAlt: intl.formatMessage({id: "projects.2.img_alt", defaultMessage: "Portfolio illustration"}),
+      title: intl.formatMessage({id: "projects.2.title", defaultMessage: "Personal portfolio development (aka this website!)"}),
+      date: intl.formatMessage({id: "projects.2.date", defaultMessage: "2025"}),
+      description: intl.formatMessage({id: "projects.2.descr", defaultMessage: "Descr todo"}),
+      stack: ["Javascript", "HTML", "CSS", "Webpack", "Netlify"]
+    },
+    {
+      key: "Project_3",
+      img: "chatbot",
+      imgAlt: intl.formatMessage({id: "projects.3.img_alt", defaultMessage: "Chatbot illustration"}),
+      title: intl.formatMessage({id: "projects.3.title", defaultMessage: "Junior Web Engineer at Sopra Steria, Strasbourg, France"}),
+      date: intl.formatMessage({id: "projects.3.date", defaultMessage: "From 2021 to 2024"}),
+      description: intl.formatMessage({id: "projects.3.descr", defaultMessage: "Descr todo"}),
+      stack: ["Javascript", "Typescript", "React", "HTML", "CSS", "Webpack", "Express", "MongoDB", "IBM Cloud", "Openshift"]
+    }
+  ];
 
   return (
     <Layout>
-      <div className={"gallery"}>
-        <Typography variant={"h2"} className={"title"}>
-          Discover my work
-        </Typography>
-        <div className={"projectsContainer"}>
-          <ProjectCarousel />
+      <div className={"galleryBackground"}>
+        <div className={"gallery"}>
+          <Typography variant={"h2"} className={"title"}>
+            <FormattedMessage id={"projects.title"} defaultMessage={"Discover my work"}/>
+          </Typography>
+          <div className={"projectsContainer"}>
+            {projects ? projects.map((item, index) => {
+              return (<ProjectCard project={item} key={index}/>)
+            }) : null}
+          </div>
+          <Typography variant={"subtitle2"} className={"title"}>
+            <FormattedMessage id={"projects.gitHubRedirect"} defaultMessage={"Feel free to visit my "}/><a href={"https://github.com/Maulraay"} target={"_blank"} rel={"noopener noreferrer"} className={'link'}>Github</a><FormattedMessage id={"projects.gitHubRedirect_2"} defaultMessage={"!"}/>
+          </Typography>
         </div>
-        <Typography variant={"subtitle2"} className={"title"}>
-          Feel free to visit my <a href={"https://github.com/Maulraay"} target={"_blank"} rel={"noopener noreferrer"} className={'link'}>Github</a>!
-        </Typography>
       </div>
     </Layout>
   )
