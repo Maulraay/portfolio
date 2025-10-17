@@ -67,7 +67,8 @@ const appTheme = createTheme({
   },
   typography: {
     h1: {
-      fontFamily: "Vina Sans",
+      fontFamily: "Squada",
+      textTransform: "uppercase",
       fontSize: '2rem',
       '@media (min-width:380px)': {
         fontSize: '3rem',
@@ -93,7 +94,8 @@ const appTheme = createTheme({
       },
     },
     h2: {
-      fontFamily: "Vina Sans",
+      fontFamily: "Squada",
+      textTransform: "uppercase",
       fontSize: '2rem',
       '@media (min-width:600px)': {
         fontSize: '3rem',
@@ -202,7 +204,7 @@ const router = createBrowserRouter([
     errorElement: <Error/>
   },
   {
-    path: 'gallery',
+    path: 'projects',
     element: <Gallery/>,
     errorElement: <Error/>
   },

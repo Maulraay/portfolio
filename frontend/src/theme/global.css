@@ -1,11 +1,11 @@
 @import './variables.css';
 
 @font-face {
-    font-family: 'Vina Sans';
+    font-family: 'Squada';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url('../../public/fonts/vina-sans-v7-latin-regular.woff2') format('woff2');
+    src: url('../../public/fonts/squada-one-normal-400.woff2') format('woff2');
 }
 
 @font-face {
