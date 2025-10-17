@@ -9,6 +9,7 @@
     --color-link: #3e4e50;
     --color-link-primary: #cfe0c3;
     --color-link-secondary: #cfe0c3;
+    --color-projects-bg-pattern: rgba(7,48,54,0.05);
 }
 
 .dark {
@@ -22,4 +23,5 @@
     --color-link: #cfe0c3;
     --color-link-primary: #cfe0c3;
     --color-link-secondary: #cfe0c3;
+    --color-projects-bg-pattern: rgba(158,193,163,0.05);
 }

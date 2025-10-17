@@ -105,7 +105,7 @@ export const Header = (props) => {
       <div className={"buttons"}>
         <Button variant={'outlined'} href={'/'}> <FormattedMessage id={"layout.header.home"} defaultMessage={"Home"}/> </Button>
         <Button variant={'outlined'} href={'/about'}> <FormattedMessage id={"layout.header.about"} defaultMessage={"About me"}/> </Button>
-        <Button variant={'outlined'} href={'/gallery'}> <FormattedMessage id={"layout.header.projects"} defaultMessage={"My projects"}/> </Button>
+        <Button variant={'outlined'} href={'/projects'}> <FormattedMessage id={"layout.header.projects"} defaultMessage={"My projects"}/> </Button>
         <Button variant={'outlined'} href={'/contact'}> <FormattedMessage id={"layout.header.contact"} defaultMessage={"Contact"}/> </Button>
       </div>
       <div className={"darkModeToggle"}>
@@ -127,7 +127,7 @@ export const Header = (props) => {
           {dropdownMenu}
         </StyledMenu>
         <IconButton className={"darkModeIcon"} onClick={() => toggleTheme(currentTheme, setCurrentTheme)} alt={intl.formatMessage({id: "layout.header.darkMode_alt", defaultMessage: "Dark Mode toggle"})}>
-          { currentTheme === 'dark' ? <DarkMode fontSize={"large"}/> : <DarkModeOutlined fontSize={"large"}/> }
+          { currentTheme === 'dark' ? <DarkMode/> : <DarkModeOutlined/> }
         </IconButton>
         <IconButton onClick={() => props.openMenu()} className={"menuIcon"}>
           <MenuIcon/>
