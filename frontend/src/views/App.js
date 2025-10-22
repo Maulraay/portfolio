@@ -260,6 +260,7 @@ const App = () =>{
             English;
       setLocale(local);
       setMessages(lang);
+      document.documentElement.lang = local;
     }
     catch (e) {
       console.warn("Failed to load locale:", e);
@@ -271,6 +272,7 @@ const App = () =>{
   function selectLanguage(newLocale) {
     setLocale(newLocale);
     localStorage.setItem("locale", newLocale);
+    document.documentElement.lang = newLocale;
     if (newLocale === 'de') setMessages(German)
     else if (newLocale === 'fr') setMessages(French)
     else setMessages(English);
