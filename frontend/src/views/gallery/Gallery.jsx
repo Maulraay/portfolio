@@ -7,12 +7,14 @@ const ProjectCard = (props = {}) => {
   const {project, ...rest} = props;
 
   const TitleComponent = (props) => (
-    <Typography fontSize={"1.5rem"} className={props.mode}>
-      {project.title} <br/>
+    <div className={props.mode}>
+      <Typography fontSize={"1.5rem"} className={props.mode}>
+        {project.title} <br/>
+      </Typography>
       <Typography sx={{ fontStyle: 'italic' }}>
         {project.date}
       </Typography>
-    </Typography>
+    </div>
   )
 
   return (
