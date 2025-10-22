@@ -4,24 +4,32 @@ import {Box, Card, CardContent, CardMedia, Chip, IconButton, Typography} from "@
 import { FormattedMessage, useIntl } from "react-intl";
 import {ChevronLeft, ChevronRight} from "@mui/icons-material";
 
-const ProjectCard = (props) => {
-  const {project, key} = props;
+const ProjectCard = (props = {}) => {
+  const {project, ...rest} = props;
+
+  const TitleComponent = (props) => (
+    <Typography fontSize={"1.5rem"} className={props.mode}>
+      {project.title} <br/>
+      <Typography sx={{ fontStyle: 'italic' }}>
+        {project.date}
+      </Typography>
+    </Typography>
+  )
+
   return (
-    <Card key={key}>
-      <CardMedia
-        component="img"
-        alt={project.imgAlt}
-        sx={{ width: "20%", objectFit: "contain" }}
-        image={`/assets/${project.img}.webp`}
-      />
+    <Card>
+      <div className={"smallScreenHeader"}>
+        <CardMedia
+          component="img"
+          alt={project.imgAlt}
+          sx={{ width: "20%", objectFit: "contain", minWidth: "250px" }}
+          image={`/assets/${project.img}.webp`}
+        />
+        <TitleComponent mode={"smallScreenCardTitle"} />
+      </div>
       <CardContent>
-        <Typography variant={"about"} align={"justify"}>
-          {project.title} <br/>
-          <Typography sx={{ fontStyle: 'italic' }}>
-            {project.date}
-          </Typography>
-        </Typography>
-        <Typography className={"projectDescr"}>
+        <TitleComponent mode={"bigScreenCardTitle"} />
+        <Typography sx={{ textAlign: "justify", hyphens: "auto", overflowWrap: "break-work", wordBreak: "break-word" }} className={"projectDescr"}>
           {project.description}
         </Typography>
         <div className={"stack"}>

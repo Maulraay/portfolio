@@ -922,25 +922,59 @@ img {
     .gallery .title{
         height: 50%;
     }
-
-    .gallery .underConstruction{
-        top: 50%;
-        transform: translateY(-50%);
-        height: 80%;
-        opacity: 20%;
-        position: absolute;
-    }
 }
 
 @media only screen and (min-height: 575px){
     .gallery .title{
         height: 20%;
     }
+}
 
-    .gallery .underConstruction{
-        height: 60%;
+@media only screen and (max-width: 799px){
+    .gallery .MuiCard-root .smallScreenHeader{
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .gallery .MuiCard-root .smallScreenHeader .MuiCardMedia-root{
+        align-self: center;
+        margin-top: 20px;
     }
 }
+
+@media only screen and (min-width: 800px){
+    .gallery .MuiCard-root .smallScreenHeader{
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 1549px){
+    .gallery .MuiCard-root{
+        flex-direction: column;
+    }
+
+    .gallery .MuiCard-root .bigScreenCardTitle{
+        display: none;
+    }
+
+    .gallery .MuiCard-root .smallScreenHeader{
+        display: flex;
+        padding: 0 15px;
+    }
+}
+
+@media only screen and (min-width: 1550px){
+    .gallery .MuiCard-root{
+        flex-direction: row;
+    }
+
+    .gallery .MuiCard-root .smallScreenCardTitle{
+        display: none;
+    }
+}
+
 
 .galleryBackground {
     position: relative;
@@ -980,10 +1014,6 @@ img {
     height: 10%;
 }
 
-.gallery .underConstruction{
-    object-fit: contain;
-}
-
 .gallery .projectsContainer {
     width: 70%;
     display: flex;
@@ -1001,13 +1031,12 @@ img {
     border-radius: 25px;
     color: var(--color-text);
     display:  flex;
-    flex-direction: row;
     gap: 20px;
     padding: 10px;
 }
 
 .gallery .MuiCard-root .MuiCardContent-root{
-    display:  flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 10px;
@@ -1018,7 +1047,9 @@ img {
 }
 .gallery .MuiCard-root .MuiCardContent-root .stack{
     display: flex;
+    flex-wrap: wrap;
     gap: 25px;
+    margin-top: 10px;
 }
 
 .gallery .stack .Javascript{
