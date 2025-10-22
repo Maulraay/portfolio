@@ -1,8 +1,7 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import { Layout } from "../layout/Layout";
-import {Box, Card, CardContent, CardMedia, Chip, IconButton, Typography} from "@mui/material";
+import { Card, CardContent, CardMedia, Chip, Typography} from "@mui/material";
 import { FormattedMessage, useIntl } from "react-intl";
-import {ChevronLeft, ChevronRight} from "@mui/icons-material";
 
 const ProjectCard = (props = {}) => {
   const {project, ...rest} = props;
