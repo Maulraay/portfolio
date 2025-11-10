@@ -125,7 +125,7 @@ const appTheme = createTheme({
     },
     about: {
       '@media (min-width:850px)': {
-        fontSize: '1.5rem',
+        fontSize: '1.3rem',
       },
     },
     projects: {

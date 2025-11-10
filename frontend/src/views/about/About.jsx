@@ -23,10 +23,10 @@ const About = () => {
         <div className={"globalPresentation"}>
           <div className={"text"}>
             <Typography variant={"about"} align={"justify"}>
-              <FormattedMessage id={"about.personalPresentation_1"} defaultMessage={"Hey there! I am Malaury - a 26-year-old full-stack web developer from France, now happily living in Buchs, in the canton of St. Gallen, Switzerland. I moved here to join my partner and to finally enjoy a life surrounded by the things I love: fresh air, mountains, lakes, and a slower pace that lets me breathe and create freely."}/>
+              <FormattedMessage id={"about.personalPresentation_1"} defaultMessage={"Hey there! I'm Malaury, a 26-year-old software engineer. I'm moving back to Strasbourg after two wonderful years in Switzerland, in the canton of St. Gallen. This chapter allowed me to nurture my creativity and refine my technical skills through the complete design and development of websites like this one, while enjoying an inspiring and relaxing environment between mountains and large lakes."}/>
             </Typography>
             <Typography variant={"about"} align={"justify"}>
-              <FormattedMessage id={"about.personalPresentation_2"} defaultMessage={"When I’m not deep into code, you’ll probably find me singing, learning to play the piano, drawing or enjoying a cozy video game session. I’ve always been driven by curiosity and a deep need to understand how things work - which is probably why I fell for computer science in the first place. I love building things that are useful, clear, and that help people save time, not waste it."}/>
+              <FormattedMessage id={"about.personalPresentation_2"} defaultMessage={"When I'm not coding, I love cooking, drawing, singing, and playing video games with my friends. Naturally curious, I'm driven by the desire to understand how things work and to make them accessible. I enjoy creating simple, useful, and intuitive solutions that make life easier rather than more complicated."}/>
             </Typography>
           </div>
           <PictureViewer src={"/assets/meInBuchs.webp"} className={"picture"} width={"30%"} alt={intl.formatMessage({id: "about.personalPresentation_portrait_alt", defaultMessage: "Myself in front of the Werdenbergsee and castle, located in Buchs SG, Switzerland"})}/>
@@ -39,7 +39,13 @@ const About = () => {
               <FormattedMessage id={"about.backgroundPresentation_1"} defaultMessage={"I have always liked figuring things out - whether it was puzzles, math problems, or tricky bugs in my code. That curiosity naturally led me to study software engineering at Telecom Nancy - a french engineering school from the Mines-Telecom institute. It is a generalist program that gave me strong fundamentals in everything from algorithms to system architecture, and the flexibility to explore all areas of development and switch from one language to another."}/>
             </Typography>
             <Typography variant={"about"} align={"justify"}>
-              <FormattedMessage id={"about.backgroundPresentation_2"} defaultMessage={"Since 2021, I have been working as a full-stack developer (mostly with the MERN stack - MongoDB, Express.js, React.js, Node.js), building AI-based chatbots, large-scale web platforms, and user-friendly interfaces. What I’m looking for now is a team and a project I can really get behind - something useful, meaningful, ideally with an environmental or social dimension. And of course, somewhere I can keep learning and growing while settling into this new Swiss life I’m building."}/>
+              <FormattedMessage id={"about.backgroundPresentation_2"} defaultMessage={"I then began my career as a full-stack web engineer at Sopra Steria, within the AI team in Strasbourg, where I worked for three years. I contributed to the development and maintenance of large-scale chatbot solutions, mainly using the MERN stack (MongoDB, Express, React & Node.js)."}/>
+            </Typography>
+            <Typography variant={"about"} align={"justify"}>
+              <FormattedMessage id={"about.backgroundPresentation_3"} defaultMessage={"Over the past two years, I've continued to expand my skills through the development of this personal website and a site for a research professor, helping her make her scientific work more accessible and centralize course materials for her students."}/>
+            </Typography>
+            <Typography variant={"about"} align={"justify"}>
+              <FormattedMessage id={"about.backgroundPresentation_4"} defaultMessage={"Today, I'm looking for a web development position in Strasbourg or nearby, or primarily remote. I'd love to join a multidisciplinary team where I can put my skills to use on meaningful, accessible, and purpose-driven projects."}/>
             </Typography>
           </div>
         </div>
