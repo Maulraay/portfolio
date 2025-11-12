@@ -69,6 +69,8 @@
   "contact.thankYou": "Vielen Dank für Ihre Nachricht!",
   "contact.thankYou_2": "Ich melde mich in Kürze bei Ihnen.",
   "contact.back": "Zurück",
+  "contact.error.title": "Ups! Etwas ist schiefgelaufen...",
+  "contact.error.descr": "Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Ich entschuldige mich für die Unannehmlichkeiten. Wenn das Problem weiterhin besteht, kontaktieren Sie mich bitte direkt unter ",
 
   "error.img_alt": "'OOPS'-Illustration",
   "error.title": "Etwas ist schiefgelaufen...",

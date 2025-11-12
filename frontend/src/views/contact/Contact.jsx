@@ -193,10 +193,13 @@ const Contact = () => {
           ) : status.substring(0,5) === "Error" ? (
               <div className={"thankYou"}>
                 <Typography variant="body2">
-                  <FormattedMessage id={"contact.oops"} defaultMessage={"Oops! Something went wrong..."}/>
+                  <FormattedMessage id={"contact.error.title"} defaultMessage={"Oops! Something went wrong..."}/>
                 </Typography>
                 <Typography variant="about">
-                  <FormattedMessage id={"contact.oops.descr"} defaultMessage={"An error has occurred while sending your message. I am sorry for the inconvenience. If the problem persists, please contact me directly at malaurykeslick.com or on LinkedIn!"}/>
+                  <FormattedMessage id={"contact.error.descr"} defaultMessage={"An error has occurred while sending your message. I am sorry for the inconvenience. If the problem persists, please contact me directly at "}/>
+                  <a href={"mailto:mkeslick.pro@gmail.com"} target={"_blank"} rel={"noopener noreferrer"} className={"link"}>mkeslick.pro@gmail.com</a>
+                  <FormattedMessage id={"contact.alternativeContact_2"} defaultMessage={" or contact me on "}/>
+                  <a href={"https://www.linkedin.com/in/malaurykeslick/"} target={"_blank"}  className={"link"}>LinkedIn</a>!
                 </Typography>
                 <Button className={"backButton"} variant="contained" href={"/contact"}>
                   <FormattedMessage id={"contact.back"} defaultMessage={"Back"}/>

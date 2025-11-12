@@ -69,6 +69,8 @@
   "contact.thankYou": "Merci pour votre message !",
   "contact.thankYou_2": "Je vous recontacte dès que possible.",
   "contact.back": "Retour",
+  "contact.error.title": "Oups ! Quelque chose s'est mal passé...",
+  "contact.error.descr": "Une erreur est survenue lors de l'envoi de votre message. Je suis désolée pour la gêne occasionnée. Si le problème persiste, veuillez me contacter directement à ",
 
   "error.img_alt": "Illustration 'OOPS'",
   "error.title": "Quelque chose s'est mal passé...",
