@@ -6,6 +6,7 @@
     --color-text: #343333;
     --color-text-primary: #F2F0F2;
     --color-text-secondary: #3e4e50;
+    --color-text-error: #820000;
     --color-link: #3e4e50;
     --color-link-primary: #cfe0c3;
     --color-link-secondary: #cfe0c3;
@@ -20,6 +21,7 @@
     --color-text: #F2F0F2;
     --color-text-primary: #F2F0F2;
     --color-text-secondary: #073036;
+    --color-text-error: #ffe967;
     --color-link: #cfe0c3;
     --color-link-primary: #cfe0c3;
     --color-link-secondary: #cfe0c3;
