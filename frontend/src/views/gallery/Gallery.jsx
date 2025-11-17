@@ -84,14 +84,14 @@ const Gallery = () => {
           <Typography variant={"h2"} className={"title"}>
             <FormattedMessage id={"projects.title"} defaultMessage={"Discover my work"}/>
           </Typography>
+          <Typography variant={"subtitle2"} className={"github"}>
+            <FormattedMessage id={"projects.gitHubRedirect"} defaultMessage={"Feel free to visit my "}/><a href={"https://github.com/Maulraay"} target={"_blank"} rel={"noopener noreferrer"} className={'link'}>Github</a><FormattedMessage id={"projects.gitHubRedirect_2"} defaultMessage={"!"}/>
+          </Typography>
           <div className={"projectsContainer"}>
             {projects ? projects.map((item, index) => {
               return (<ProjectCard project={item} key={index}/>)
             }) : null}
           </div>
-          <Typography variant={"subtitle2"} className={"title"}>
-            <FormattedMessage id={"projects.gitHubRedirect"} defaultMessage={"Feel free to visit my "}/><a href={"https://github.com/Maulraay"} target={"_blank"} rel={"noopener noreferrer"} className={'link'}>Github</a><FormattedMessage id={"projects.gitHubRedirect_2"} defaultMessage={"!"}/>
-          </Typography>
         </div>
       </div>
     </Layout>
