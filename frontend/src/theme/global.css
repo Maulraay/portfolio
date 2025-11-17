@@ -286,7 +286,7 @@ img {
     }
 }
 
-@media only screen and (max-width: 599px){
+@media only screen and (max-width: 675px){
     .layout .footer .legalRedirection{
         display: none;
     }
@@ -363,13 +363,13 @@ img {
     }
 }
 
-@media only screen and (max-width: 1229px) {
+@media only screen and (max-width: 1364px) {
     .layout .footer .support {
         display: none;
     }
 }
 
-@media only screen and (min-width: 1230px) {
+@media only screen and (min-width: 1365px) {
     .layout .footer .support {
         display: flex;
     }
@@ -448,6 +448,7 @@ img {
 .layout .copyright .copyrightText {
     color: var(--color-text-primary);
     margin-top: 3px;
+    text-align:  center;
 }
 
 .layout .copyright .socialNetworks{
