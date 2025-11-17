@@ -99,10 +99,10 @@ const Contact = () => {
   }
 
   const helperTextWithCount = (field) => (
-    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 8 }}>
-      <div style={{ flex: 1 }}>{getErrorMessage(field)}</div>
-      <div style={{ fontSize: 12 }} className={"charCounter"}>{charCounter(field)}</div>
-    </div>
+    <span style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 8 }}>
+      <span style={{ flex: 1 }}>{getErrorMessage(field)}</span>
+      <span style={{ fontSize: 12 }} className={"charCounter"}>{charCounter(field)}</span>
+    </span>
   );
 
   const handleSubmit = async (e) => {
