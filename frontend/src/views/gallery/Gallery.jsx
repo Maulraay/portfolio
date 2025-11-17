@@ -8,7 +8,7 @@ const ProjectCard = (props = {}) => {
 
   const TitleComponent = (props) => (
     <div className={props.mode}>
-      <Typography fontSize={"1.5rem"} className={props.mode}>
+      <Typography variant={"projects"} className={props.mode}>
         {project.title} <br/>
       </Typography>
       <Typography sx={{ fontStyle: 'italic' }}>
@@ -23,7 +23,7 @@ const ProjectCard = (props = {}) => {
         <CardMedia
           component="img"
           alt={project.imgAlt}
-          sx={{ width: "20%", objectFit: "contain", minWidth: "250px" }}
+          sx={{ width: "20%", objectFit: "contain", minWidth: { xs: "200px", sm: "250px"} }}
           image={`/assets/${project.img}.webp`}
         />
         <TitleComponent mode={"smallScreenCardTitle"} />

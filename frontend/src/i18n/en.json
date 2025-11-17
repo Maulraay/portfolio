@@ -1,4 +1,6 @@
 {
+  "layout.responsiveNotSupported": "Sorry, your device does not support full functionality of this website. Please try using a different device.",
+
   "layout.header.logo_alt": "Malaury Keslick stylized logo",
   "layout.header.home": "Home",
   "layout.header.about": "About me",

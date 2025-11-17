@@ -1,4 +1,6 @@
 {
+  "layout.responsiveNotSupported": "Leider unterstützt Ihr Gerät nicht alle Funktionen dieser Website. Bitte versuchen Sie es mit einem anderen Gerät.",
+
   "layout.header.logo_alt": "Malaury Keslick stilisiertes Logo",
   "layout.header.home": "Startseite",
   "layout.header.about": "Über mich",

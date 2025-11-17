@@ -80,7 +80,7 @@ const appTheme = createTheme({
         fontSize: '5rem',
       },
       '@media (min-width:1430px)': {
-        fontSize: '7rem',
+        fontSize: '6.5rem',
       },
     },
     subtitle1: {
@@ -90,7 +90,7 @@ const appTheme = createTheme({
         fontSize: '2rem',
       },
       '@media (min-width:1430px)': {
-        fontSize: '3rem',
+        fontSize: '2.5rem',
       },
     },
     h2: {
@@ -129,6 +129,11 @@ const appTheme = createTheme({
       },
     },
     projects: {
+      '@media (min-width:450px)': {
+        fontSize: '1.5rem',
+      },
+    },
+    error: {
       '@media (min-width:600px)': {
         fontSize: '2rem',
       },
@@ -181,15 +186,28 @@ const appTheme = createTheme({
           },
         },
         {
-          props: { variant: 'projects' },
+          props: { variant: 'error' },
           style: {
             fontFamily: 'Mina',
             fontSize: '1.5rem',
           },
         },
+        {
+          props: { variant: 'projects' },
+          style: {
+            fontFamily: 'Mina',
+            fontSize: '1.3rem',
+          },
+        },
       ],
     },
   },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 350,
+    }
+  }
 });
 
 const router = createBrowserRouter([
